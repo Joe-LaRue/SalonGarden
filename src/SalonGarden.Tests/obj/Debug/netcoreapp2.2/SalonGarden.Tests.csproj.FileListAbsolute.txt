@@ -1,0 +1,14 @@
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.dll
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\NUnit3.TestAdapter.pdb
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\nunit.engine.netstandard.dll
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Tests.deps.json
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Tests.runtimeconfig.json
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Tests.runtimeconfig.dev.json
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Tests.dll
+c:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Tests.pdb
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.csprojAssemblyReference.cache
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.csproj.CoreCompileInputs.cache
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.AssemblyInfoInputs.cache
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.AssemblyInfo.cs
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.dll
+c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.pdb
