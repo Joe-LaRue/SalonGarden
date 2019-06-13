@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace SalonGarden.Core
+namespace SalonGarden.Core.Entities
 {
     public class Evaluation
     {

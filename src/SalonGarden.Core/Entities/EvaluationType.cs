@@ -1,4 +1,4 @@
-namespace SalonGarden.Core
+namespace SalonGarden.Core.Entities
 {
     public class EvaluationType
     {
