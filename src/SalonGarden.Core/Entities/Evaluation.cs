@@ -11,7 +11,22 @@ namespace SalonGarden.Core.Entities
         public string EducatorId { get; set; }
         public string StudentId { get; set; }
         public List<EvaluationStepEntry> EvaluationStepEntries { get; set; }
+
+        public Evaluation()
+        {
+
+        }
+
         
-        
+        public Evaluation(int evaluationTypeId, int techniqueId, string description, string educatorId, string studentId)
+        {
+            this.EvaluationTypeId = evaluationTypeId;
+            this.TechniqueId = techniqueId;
+            this.Description = description;
+            this.EducatorId = educatorId;
+            this.StudentId = studentId;
+
+        }
+
     }
 }
