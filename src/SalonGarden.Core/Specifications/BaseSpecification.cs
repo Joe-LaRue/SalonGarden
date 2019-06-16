@@ -38,7 +38,7 @@ namespace SalonGarden.Core.Specifications
         {
             Skip = skip;
             Take = take;
-            isPagingEnabled = true;
+            IsPagingEnabled = true;
         }
 
         protected virtual void ApplyOrderBy(Expression<Func<T, object>> orderByExpression)
