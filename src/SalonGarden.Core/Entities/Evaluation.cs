@@ -25,7 +25,7 @@ namespace SalonGarden.Core.Entities
             this.Description = description;
             this.EducatorId = educatorId;
             this.StudentId = studentId;
-
+            EvaluationStepEntries = new List<EvaluationStepEntry>();
         }
 
     }

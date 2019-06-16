@@ -6,6 +6,15 @@ namespace SalonGarden.Core.Entities
         public int EvaluationId { get; set; }
         public int EvaluationStepId { get; set; }
         public int AllocatedPoints { get; set; }
+
+        public EvaluationStepEntry()
+        {
+            
+        }
         
+        public EvaluationStepEntry(EvaluationStep evaluationStep)
+        {
+            EvaluationStepId = evaluationStep.Id;
+        }
     }
 }

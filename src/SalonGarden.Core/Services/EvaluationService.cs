@@ -1,5 +1,6 @@
 using SalonGarden.Core.Interfaces;
 using SalonGarden.Core.Entities;
+using SalonGarden.Core.Specifications;
 
 namespace SalonGarden.Core.Services
 {
@@ -16,6 +17,15 @@ namespace SalonGarden.Core.Services
 
             _salonGardenRepository.Add(evaluation);
 
+            var evaluationSteps =  _salonGardenRepository.List(new EvaluationStepsByEvaluationType(evaluation.EvaluationTypeId));
+
+            foreach (var evaluationStep in evaluationSteps)
+            {
+                var stepEntry = new EvaluationStepEntry(evaluationStep);
+                evaluation.EvaluationStepEntries.Add(stepEntry);
+            }
+
+            _salonGardenRepository.Update(evaluation);
             return evaluation;
         }
     }
