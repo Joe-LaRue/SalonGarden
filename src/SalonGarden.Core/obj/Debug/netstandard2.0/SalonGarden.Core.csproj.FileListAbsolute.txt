@@ -1,0 +1,9 @@
+C:\code\SalonGarden\src\SalonGarden.Core\bin\Debug\netstandard2.0\SalonGarden.Core.deps.json
+C:\code\SalonGarden\src\SalonGarden.Core\bin\Debug\netstandard2.0\SalonGarden.Core.dll
+C:\code\SalonGarden\src\SalonGarden.Core\bin\Debug\netstandard2.0\SalonGarden.Core.pdb
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.csprojAssemblyReference.cache
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.csproj.CoreCompileInputs.cache
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.AssemblyInfoInputs.cache
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.AssemblyInfo.cs
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.dll
+C:\code\SalonGarden\src\SalonGarden.Core\obj\Debug\netstandard2.0\SalonGarden.Core.pdb

@@ -1,6 +1,7 @@
 using SalonGarden.Core.Interfaces;
 using SalonGarden.Core.Entities;
 using SalonGarden.Core.Specifications;
+using System.Linq;
 
 namespace SalonGarden.Core.Services
 {
@@ -12,18 +13,14 @@ namespace SalonGarden.Core.Services
             _salonGardenRepository = salonGardenRepository;
         }
 
-        public Evaluation CreateEvaluation(int evaluationTypeId, int techniqueId, string description, string educatorId, string studentId){
+        public Evaluation CreateEvaluation(int evaluationTypeId, int techniqueId, string description, string educatorId, string studentId)
+        {
             var evaluation = new Evaluation(evaluationTypeId, techniqueId, description, educatorId, studentId);
 
             _salonGardenRepository.Add(evaluation);
+            var evaluationSteps = _salonGardenRepository.List(new EvaluationStepsByEvaluationType(evaluation.EvaluationTypeId));
 
-            var evaluationSteps =  _salonGardenRepository.List(new EvaluationStepsByEvaluationType(evaluation.EvaluationTypeId));
-
-            foreach (var evaluationStep in evaluationSteps)
-            {
-                var stepEntry = new EvaluationStepEntry(evaluationStep);
-                evaluation.EvaluationStepEntries.Add(stepEntry);
-            }
+            evaluation.InitializeEvaluationStepEntries(evaluationSteps);
 
             _salonGardenRepository.Update(evaluation);
             return evaluation;
