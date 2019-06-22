@@ -9,7 +9,7 @@ namespace SalonGarden.Core.Entities
         public int Id { get; set; }
         public EvaluationType EvaluationType { get; set; }
         public int EvaluationTypeId { get; set; }
-        public EvaluationStatus EvaluationStatus { get; set; } 
+        public EvaluationStatus EvaluationStatus { get; set; }
         public int EvaluationStatusId { get; set; }
         public int TechniqueId { get; set; }
         public string Description { get; set; }
@@ -17,38 +17,36 @@ namespace SalonGarden.Core.Entities
         public string StudentId { get; set; }
         public List<EvaluationDetail> EvaluationDetails { get; private set; }
         public DateTime CreationDate { get; set; }
-        
+
 
         public Evaluation()
         {
 
         }
-        
+
         public Evaluation(int evaluationTypeId, int techniqueId, string description, string educatorId, string studentId)
         {
             this.EvaluationTypeId = evaluationTypeId;
             this.TechniqueId = techniqueId;
             this.Description = description;
             this.EducatorId = educatorId;
-            this.StudentId = studentId;            
+            this.StudentId = studentId;
         }
 
         public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationStep> evaluationSteps)
         {
-            EvaluationDetails = new List<EvaluationDetail
-            >();
-             foreach (var evaluationStep in evaluationSteps)
+            EvaluationDetails = new List<EvaluationDetail>();
+            foreach (var evaluationStep in evaluationSteps)
             {
-                var stepEntry = new EvaluationDetail
-                (evaluationStep);
-                EvaluationDetails.Add(stepEntry);
+                var detail = new EvaluationDetail(evaluationStep);
+                EvaluationDetails.Add(detail);
             }
         }
 
         public void SetEvaluationDetailPoints(int evaluationStepEntryId, int points)
         {
             var evaluationStepEntry = EvaluationDetails.FirstOrDefault(x => x.Id == evaluationStepEntryId);
-                
+
             if (evaluationStepEntry == null)
             {
                 return;
@@ -58,6 +56,6 @@ namespace SalonGarden.Core.Entities
         }
 
 
-        
+
     }
 }

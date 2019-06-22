@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {}
+    "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {}
   },
   "projects": {
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+    "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectUniqueName": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "projectName": "SalonGarden.Core",
-        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
+        "outputPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
