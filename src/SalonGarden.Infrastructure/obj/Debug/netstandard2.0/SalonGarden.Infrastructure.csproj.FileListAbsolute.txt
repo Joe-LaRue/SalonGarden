@@ -7,3 +7,6 @@ C:\code\SalonGarden\src\SalonGarden.Infrastructure\obj\Debug\netstandard2.0\Salo
 C:\code\SalonGarden\src\SalonGarden.Infrastructure\obj\Debug\netstandard2.0\SalonGarden.Infrastructure.AssemblyInfo.cs
 C:\code\SalonGarden\src\SalonGarden.Infrastructure\obj\Debug\netstandard2.0\SalonGarden.Infrastructure.dll
 C:\code\SalonGarden\src\SalonGarden.Infrastructure\obj\Debug\netstandard2.0\SalonGarden.Infrastructure.pdb
+C:\code\SalonGarden\src\SalonGarden.Infrastructure\bin\Debug\netstandard2.0\SalonGarden.Core.dll
+C:\code\SalonGarden\src\SalonGarden.Infrastructure\bin\Debug\netstandard2.0\SalonGarden.Core.pdb
+C:\code\SalonGarden\src\SalonGarden.Infrastructure\obj\Debug\netstandard2.0\SalonGarden.Infrastructure.csproj.CopyComplete

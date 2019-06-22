@@ -25,6 +25,16 @@
         "build": {
           "build/netstandard2.0/NETStandard.Library.targets": {}
         }
+      },
+      "SalonGarden.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "compile": {
+          "bin/placeholder/SalonGarden.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/SalonGarden.Core.dll": {}
+        }
       }
     }
   },
@@ -171,11 +181,17 @@
         "netstandard.library.2.0.3.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
+    },
+    "SalonGarden.Core/1.0.0": {
+      "type": "project",
+      "path": "../SalonGarden.Core/SalonGarden.Core.csproj",
+      "msbuildProject": "../SalonGarden.Core/SalonGarden.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.3"
+      "NETStandard.Library >= 2.0.3",
+      "SalonGarden.Core >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -207,7 +223,11 @@
       },
       "frameworks": {
         "netstandard2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+              "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
