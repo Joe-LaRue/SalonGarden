@@ -185,11 +185,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
-      "projectName": "SalonGarden.Core",
-      "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+      "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
+      "projectName": "SalonGarden.Infrastructure",
+      "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
       "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-      "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
+      "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

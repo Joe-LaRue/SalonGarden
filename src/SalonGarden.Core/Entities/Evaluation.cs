@@ -11,8 +11,7 @@ namespace SalonGarden.Core.Entities
         public string Description { get; set; }
         public string EducatorId { get; set; }
         public string StudentId { get; set; }
-        public List<EvaluationDetail
-        > EvaluationStepEntries { get; private set; }
+        public List<EvaluationDetail> EvaluationDetails { get; private set; }
 
         public Evaluation()
         {
@@ -30,19 +29,19 @@ namespace SalonGarden.Core.Entities
 
         public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationStep> evaluationSteps)
         {
-            EvaluationStepEntries = new List<EvaluationDetail
+            EvaluationDetails = new List<EvaluationDetail
             >();
              foreach (var evaluationStep in evaluationSteps)
             {
                 var stepEntry = new EvaluationDetail
                 (evaluationStep);
-                EvaluationStepEntries.Add(stepEntry);
+                EvaluationDetails.Add(stepEntry);
             }
         }
 
-        public void SetEvaluationStepEntryPoints(int evaluationStepEntryId, int points)
+        public void SetEvaluationDetailPoints(int evaluationStepEntryId, int points)
         {
-            var evaluationStepEntry = EvaluationStepEntries.FirstOrDefault(x => x.Id == evaluationStepEntryId);
+            var evaluationStepEntry = EvaluationDetails.FirstOrDefault(x => x.Id == evaluationStepEntryId);
                 
             if (evaluationStepEntry == null)
             {

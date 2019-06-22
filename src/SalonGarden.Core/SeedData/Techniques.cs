@@ -1,16 +1,13 @@
 using System.Collections.Generic;
+using SalonGarden.Core.Entities;
 
-namespace SalonGarden.Core.Entities
+namespace SalonGarden.Core.SeedData
 {
-    public class Technique
+    public class Techniques
     {
-        public int Id { get; set; }
-        public string Description { get; set; }
-        public int TechniqueTypeId { get; set; }
-
-         public List<Technique> All 
-         {
-             get
+        public static List<Technique> All
+        {
+            get
             {
                 return new List<Technique>()
                 {
@@ -31,6 +28,6 @@ namespace SalonGarden.Core.Entities
                     new Technique(){ Id = 12, TechniqueTypeId = 2, Description = "Long Layer"} 
                 };
             }
-         }
+        }
     }
 }
