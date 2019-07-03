@@ -6,7 +6,7 @@ using SalonGarden.Core.Interfaces;
 
 namespace SalonGarden.Core.Specifications
 {
-    public class EvaluationStepsByEvaluationType : BaseSpecification<EvaluationStep>
+    public class EvaluationStepsByEvaluationType : BaseSpecification<EvaluationCriterion>
     {
         public EvaluationStepsByEvaluationType(int evaluationTypeId) 
         : base(x => x.EvaluationTypeId == evaluationTypeId)

@@ -33,7 +33,7 @@ namespace SalonGarden.Core.Entities
             this.StudentId = studentId;
         }
 
-        public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationStep> evaluationSteps)
+        public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationCriterion> evaluationSteps)
         {
             EvaluationDetails = new List<EvaluationDetail>();
             foreach (var evaluationStep in evaluationSteps)

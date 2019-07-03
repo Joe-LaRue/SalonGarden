@@ -4,7 +4,7 @@ namespace SalonGarden.Core.Entities
     {
         public int Id { get; set; }
         public int EvaluationId { get; set; }
-        public int EvaluationStepId { get; set; }
+        public int EvaluationCriterionId { get; set; }
         public int AllocatedPoints { get; set; }
 
         public EvaluationDetail()
@@ -12,9 +12,9 @@ namespace SalonGarden.Core.Entities
             
         }
         
-        public EvaluationDetail(EvaluationStep evaluationStep)
+        public EvaluationDetail(EvaluationCriterion evaluationCriterion)
         {
-            EvaluationStepId = evaluationStep.Id;
+            EvaluationCriterionId = evaluationCriterion.Id;
         }
     }
 }
