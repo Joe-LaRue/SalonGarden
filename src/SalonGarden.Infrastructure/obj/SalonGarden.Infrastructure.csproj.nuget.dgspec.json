@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj": {}
+    "c:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj": {}
   },
   "projects": {
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+    "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectUniqueName": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "projectName": "SalonGarden.Core",
-        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
+        "outputPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj": {
+    "c:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
+        "projectUniqueName": "c:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
         "projectName": "SalonGarden.Infrastructure",
-        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
+        "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj",
         "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\obj\\",
+        "outputPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -87,8 +87,8 @@
         "frameworks": {
           "netstandard2.0": {
             "projectReferences": {
-              "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-                "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
+              "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+                "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
               }
             }
           }
@@ -102,6 +102,10 @@
       "frameworks": {
         "netstandard2.0": {
           "dependencies": {
+            "Microsoft.EntityFramework.Core": {
+              "target": "Package",
+              "version": "(, )"
+            },
             "NETStandard.Library": {
               "suppressParent": "All",
               "target": "Package",
