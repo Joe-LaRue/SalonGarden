@@ -1,20 +1,19 @@
-using NUnit.Framework;
+using Xunit;
 using SalonGarden.Core.Entities;
 
 namespace Tests
 {
     public class Tests
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
-        [Test]
-        public void InitializeEvaluationStepEntries_()
-        {
-            
-            Assert.Pass();
-        }
+        
+       [Fact]
+       public void CreateEvaluation_()
+       {
+       //Given
+       
+       //When
+       
+       //Then
+       }
     }
 }

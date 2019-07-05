@@ -9,7 +9,7 @@ namespace SalonGarden.Core.Entities
         public int Id { get; set; }
         public string Description { get; set; }
         public int SequenceNumber { get; set; }
-        public List<EvaluationCriterion> EvaluationCriteria { get; set; }
+        public List<EvaluationCriteria> EvaluationCriteria { get; set; }
 
     }
 }

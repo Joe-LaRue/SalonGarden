@@ -15,7 +15,7 @@ namespace SalonGarden.Core.Entities
         public string Description { get; set; }
         public string EducatorId { get; set; }
         public string StudentId { get; set; }
-        public List<EvaluationDetail> EvaluationDetails { get; private set; }
+        public List<EvaluationDetailItem> EvaluationDetailItems { get; private set; }
         public DateTime CreationDate { get; set; }
 
 
@@ -33,19 +33,19 @@ namespace SalonGarden.Core.Entities
             this.StudentId = studentId;
         }
 
-        public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationCriterion> evaluationSteps)
+        public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationCriteria> evaluationCriteria)
         {
-            EvaluationDetails = new List<EvaluationDetail>();
-            foreach (var evaluationStep in evaluationSteps)
+            EvaluationDetailItems = new List<EvaluationDetailItem>();
+            foreach (var criteria in evaluationCriteria)
             {
-                var detail = new EvaluationDetail(evaluationStep);
-                EvaluationDetails.Add(detail);
+                var detail = new EvaluationDetailItem(criteria);
+                EvaluationDetailItems.Add(detail);
             }
         }
 
         public void SetEvaluationDetailPoints(int evaluationStepEntryId, int points)
         {
-            var evaluationStepEntry = EvaluationDetails.FirstOrDefault(x => x.Id == evaluationStepEntryId);
+            var evaluationStepEntry = EvaluationDetailItems.FirstOrDefault(x => x.Id == evaluationStepEntryId);
 
             if (evaluationStepEntry == null)
             {

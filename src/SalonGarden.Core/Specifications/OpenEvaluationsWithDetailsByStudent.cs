@@ -10,7 +10,7 @@ namespace SalonGarden.Core.Specifications
         : base(x => x.StudentId == studentId && x.EvaluationStatusId == (int)EvaluationStatuses.Open)
         {
             AddInclude(x => x.EvaluationType);
-            AddInclude(x => x.EvaluationDetails);
+            AddInclude(x => x.EvaluationDetailItems);
             AddInclude("EvaluationDetails.EvaluationStep");
             AddInclude(x => x.EvaluationStatus);
 

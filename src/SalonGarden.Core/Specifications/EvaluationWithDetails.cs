@@ -8,7 +8,7 @@ namespace SalonGarden.Core.Specifications
     {
         public EvaluationWithDetails(int evaluationId) : base(x => x.Id == evaluationId)
         {
-            AddInclude(x => x.EvaluationDetails);
+            AddInclude(x => x.EvaluationDetailItems);
             AddInclude(x => x.EvaluationType);
         }
     }

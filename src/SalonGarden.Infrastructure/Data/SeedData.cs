@@ -19,10 +19,10 @@ namespace SalonGarden.Infrastructure.Data
                     Id = 1,
                     Description = "Greeting",
                     SequenceNumber = 1,
-                    EvaluationCriteria = new List<EvaluationCriterion>()
+                    EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                        new EvaluationCriterion(){ Id= 1, Description = "Warm Welcome", SequenceNumber = 1 },
-                        new EvaluationCriterion(){ Id= 2, Description = "Introduction", SequenceNumber = 2 },
+                        new EvaluationCriteria(){ Id= 1, Description = "Warm Welcome", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 2, Description = "Introduction", SequenceNumber = 2 },
                     }
                 },
                  new EvaluationCriteriaGroup()
@@ -30,13 +30,13 @@ namespace SalonGarden.Infrastructure.Data
                     Id = 2,
                     Description = "Consultation",
                     SequenceNumber = 2,
-                    EvaluationCriteria = new List<EvaluationCriterion>()
+                    EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                        new EvaluationCriterion(){ Id= 3, Description = "Sensory Experience", SequenceNumber = 1 },
-                        new EvaluationCriterion(){ Id= 4, Description = "Listening Skills", SequenceNumber = 2 },
-                        new EvaluationCriterion(){ Id= 5, Description = "Appropriate Questions", SequenceNumber = 3},
-                        new EvaluationCriterion(){ Id= 6, Description = "Maintenance/Product Reccomendations", SequenceNumber = 4},
-                        new EvaluationCriterion(){ Id= 7, Description = "Review/Agreement", SequenceNumber = 5}
+                        new EvaluationCriteria(){ Id= 3, Description = "Sensory Experience", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 4, Description = "Listening Skills", SequenceNumber = 2 },
+                        new EvaluationCriteria(){ Id= 5, Description = "Appropriate Questions", SequenceNumber = 3},
+                        new EvaluationCriteria(){ Id= 6, Description = "Maintenance/Product Reccomendations", SequenceNumber = 4},
+                        new EvaluationCriteria(){ Id= 7, Description = "Review/Agreement", SequenceNumber = 5}
                     }
                 },
                   new EvaluationCriteriaGroup()
@@ -44,15 +44,15 @@ namespace SalonGarden.Infrastructure.Data
                     Id = 3,
                     Description = "Technical",
                     SequenceNumber = 3,
-                    EvaluationCriteria = new List<EvaluationCriterion>()
+                    EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                        new EvaluationCriterion(){ Id= 8, Description = "Shampoo/Massage/Cleanup", SequenceNumber = 1 },
-                        new EvaluationCriterion(){ Id= 9, Description = "Clean Sections", SequenceNumber = 2 },
-                        new EvaluationCriterion(){ Id= 10, Description = "Body Position", SequenceNumber = 3},
-                        new EvaluationCriterion(){ Id= 11, Description = "Knowledge of Technique", SequenceNumber = 4},
-                        new EvaluationCriterion(){ Id= 12, Description = "Control", SequenceNumber = 5},
-                        new EvaluationCriterion(){ Id= 13, Description = "Cross Check/Balance", SequenceNumber = 6},
-                        new EvaluationCriterion(){ Id= 14, Description = "Completed On Time", SequenceNumber = 7 },
+                        new EvaluationCriteria(){ Id= 8, Description = "Shampoo/Massage/Cleanup", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 9, Description = "Clean Sections", SequenceNumber = 2 },
+                        new EvaluationCriteria(){ Id= 10, Description = "Body Position", SequenceNumber = 3},
+                        new EvaluationCriteria(){ Id= 11, Description = "Knowledge of Technique", SequenceNumber = 4},
+                        new EvaluationCriteria(){ Id= 12, Description = "Control", SequenceNumber = 5},
+                        new EvaluationCriteria(){ Id= 13, Description = "Cross Check/Balance", SequenceNumber = 6},
+                        new EvaluationCriteria(){ Id= 14, Description = "Completed On Time", SequenceNumber = 7 },
                     }
                 },
                    new EvaluationCriteriaGroup()
@@ -60,11 +60,11 @@ namespace SalonGarden.Infrastructure.Data
                     Id = 4,
                     Description = "Professionalism",
                     SequenceNumber = 4,
-                    EvaluationCriteria = new List<EvaluationCriterion>()
+                    EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                         new EvaluationCriterion(){ Id= 15, Description = "Appropriate Conversation", SequenceNumber = 1 },
-                        new EvaluationCriterion(){ Id= 16, Description = "Personal Appearance", SequenceNumber = 2 },
-                        new EvaluationCriterion(){ Id= 17, Description = "Ask for Referrals/Rebooks", SequenceNumber = 3}
+                         new EvaluationCriteria(){ Id= 15, Description = "Appropriate Conversation", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 16, Description = "Personal Appearance", SequenceNumber = 2 },
+                        new EvaluationCriteria(){ Id= 17, Description = "Ask for Referrals/Rebooks", SequenceNumber = 3}
                     }
                 },
                     new EvaluationCriteriaGroup()
@@ -72,12 +72,12 @@ namespace SalonGarden.Infrastructure.Data
                     Id = 5,
                     Description = "Styling",
                     SequenceNumber = 5,
-                    EvaluationCriteria = new List<EvaluationCriterion>()
+                    EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                        new EvaluationCriterion(){ Id= 18, Description = "Explanation of Products", SequenceNumber = 1 },
-                        new EvaluationCriterion(){ Id= 19, Description = "Sectioning", SequenceNumber = 2 },
-                        new EvaluationCriterion(){ Id= 20, Description = "Control of Hair", SequenceNumber = 3},
-                        new EvaluationCriterion(){ Id= 21, Description = "Teach Guest How to Recreate", SequenceNumber = 4},
+                        new EvaluationCriteria(){ Id= 18, Description = "Explanation of Products", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 19, Description = "Sectioning", SequenceNumber = 2 },
+                        new EvaluationCriteria(){ Id= 20, Description = "Control of Hair", SequenceNumber = 3},
+                        new EvaluationCriteria(){ Id= 21, Description = "Teach Guest How to Recreate", SequenceNumber = 4},
                     }
                 }
             };

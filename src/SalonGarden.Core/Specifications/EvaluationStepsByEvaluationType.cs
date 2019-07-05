@@ -6,10 +6,10 @@ using SalonGarden.Core.Interfaces;
 
 namespace SalonGarden.Core.Specifications
 {
-    public class EvaluationStepsByEvaluationType : BaseSpecification<EvaluationCriterion>
+    public class EvaluationStepsByEvaluationType : BaseSpecification<EvaluationCriteria>
     {
         public EvaluationStepsByEvaluationType(int evaluationTypeId) 
-        : base(x => x.EvaluationTypeId == evaluationTypeId)
+        : base(x => x.Id == evaluationTypeId)
         {
             ApplyOrderBy(x => x.SequenceNumber);
             
