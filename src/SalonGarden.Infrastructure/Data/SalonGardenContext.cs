@@ -1,7 +1,9 @@
 
+using Microsoft.EntityFrameworkCore;
+
 namespace SalonGarden.Infrastructure.Data
 {
-    public class SalonGardenContext 
+    public class SalonGardenContext : DbContext
     {
         
     }

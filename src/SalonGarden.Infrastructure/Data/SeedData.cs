@@ -1,4 +1,5 @@
 using SalonGarden.Core.Entities;
+using System;
 using System.Collections.Generic;
 
 namespace SalonGarden.Infrastructure.Data
@@ -8,6 +9,15 @@ namespace SalonGarden.Infrastructure.Data
         public SeedData()
         {
 
+        }
+
+        public List<EvaluationStatus> EvaluationStatuses()
+        {
+            return new List<EvaluationStatus>()
+            {
+                new EvaluationStatus() { Id = 1, Description = "Open" },
+                new EvaluationStatus() { Id = 2, Description = "Closed" }
+            };
         }
 
         public List<EvaluationCriteriaGroup> EvaluationCriteriaGroups()
@@ -62,7 +72,7 @@ namespace SalonGarden.Infrastructure.Data
                     SequenceNumber = 4,
                     EvaluationCriteria = new List<EvaluationCriteria>()
                     {
-                         new EvaluationCriteria(){ Id= 15, Description = "Appropriate Conversation", SequenceNumber = 1 },
+                        new EvaluationCriteria(){ Id= 15, Description = "Appropriate Conversation", SequenceNumber = 1 },
                         new EvaluationCriteria(){ Id= 16, Description = "Personal Appearance", SequenceNumber = 2 },
                         new EvaluationCriteria(){ Id= 17, Description = "Ask for Referrals/Rebooks", SequenceNumber = 3}
                     }
@@ -83,7 +93,7 @@ namespace SalonGarden.Infrastructure.Data
             };
         }
 
-        public List<TechniqueType> GetTechniqueTypes()
+        public List<TechniqueType> TechniqueTypes()
         {
             return new List<TechniqueType>()
                 {
@@ -92,7 +102,7 @@ namespace SalonGarden.Infrastructure.Data
                 };
         }
 
-        public List<Technique> GetTechniques()
+        public List<Technique> Techniques()
         {
             return new List<Technique>()
                 {

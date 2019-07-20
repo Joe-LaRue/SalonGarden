@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {}
+    "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {}
   },
   "projects": {
-    "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+    "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "projectName": "SalonGarden.Core",
-        "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
+        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
         "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
+        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -61,14 +61,14 @@
         }
       }
     },
-    "c:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {
+    "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj",
+        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj",
         "projectName": "SalonGarden.Tests",
-        "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj",
+        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj",
         "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Tests\\obj\\",
+        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -87,8 +87,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-                "projectPath": "c:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
+              "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
+                "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
               }
             }
           }
