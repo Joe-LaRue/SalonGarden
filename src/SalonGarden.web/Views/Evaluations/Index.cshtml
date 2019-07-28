@@ -1,4 +1,4 @@
-﻿@model IEnumerable<SalonGarden.Core.Entities.Evaluation>
+﻿@model EvaluationListViewModel
 
 @{
     ViewData["Title"] = "Index";
@@ -12,58 +12,40 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.EvaluationType)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EvaluationStatus)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TechniqueId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Description)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.EducatorId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.StudentId)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CreationDate)
-            </th>
+            <th>Date</th>
+            <th>Student</th>
+            <th>Educator</th>
+            <th>Type</th>
+            <th>Technique</th>
+            <th>Description</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var item in Model) {
+@foreach (var evaluation in Model.Evaluations) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.EvaluationType.Id)
+               @evaluation.CreationDate.ToShortDateString()
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EvaluationStatus.Id)
+                @evaluation.StudentId
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TechniqueId)
+                @evaluation.EducatorId
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Description)
+                @evaluation.EvaluationType.Description
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.EducatorId)
+                @evaluation.Technique.Description
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.StudentId)
-            </td>
+                @evaluation.Description
+            </td>          
             <td>
-                @Html.DisplayFor(modelItem => item.CreationDate)
-            </td>
-            <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                <a asp-action="Edit" asp-route-id="@evaluation.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@evaluation.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@evaluation.Id">Delete</a>
             </td>
         </tr>
 }

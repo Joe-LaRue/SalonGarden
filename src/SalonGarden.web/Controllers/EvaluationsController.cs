@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalonGarden.Core.Entities;
 using SalonGarden.Infrastructure.Data;
+using SalonGarden.Web.Models;
 
 namespace SalonGarden.Web.Controllers
 {
@@ -22,8 +23,15 @@ namespace SalonGarden.Web.Controllers
         // GET: Evaluations
         public async Task<IActionResult> Index()
         {
-            var salonGardenContext = _context.Evaluations.Include(e => e.EvaluationStatus).Include(e => e.EvaluationType);
-            return View(await salonGardenContext.ToListAsync());
+            var viewModel = new EvaluationListViewModel();
+            
+            viewModel.Evaluations = await _context.Evaluations
+                .Include(e => e.EvaluationStatus)
+                .Include(e => e.EvaluationType)
+                .Include(e => e.Technique)
+                .ToListAsync();
+
+            return View(viewModel);
         }
 
         // GET: Evaluations/Details/5
@@ -49,8 +57,8 @@ namespace SalonGarden.Web.Controllers
         // GET: Evaluations/Create
         public IActionResult Create()
         {
-            ViewData["EvaluationStatusId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Id");
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Id");
+            ViewData["TechniqueId"] = new SelectList(_context.Set<Technique>(), "Id", "Description");
+            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Description");
             return View();
         }
 

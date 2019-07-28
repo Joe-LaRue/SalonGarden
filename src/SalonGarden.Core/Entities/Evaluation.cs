@@ -11,6 +11,7 @@ namespace SalonGarden.Core.Entities
         public int EvaluationTypeId { get; set; }
         public EvaluationStatus EvaluationStatus { get; set; }
         public int EvaluationStatusId { get; set; }
+        public Technique Technique { get; set; }
         public int TechniqueId { get; set; }
         public string Description { get; set; }
         public string EducatorId { get; set; }
