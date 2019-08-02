@@ -26,45 +26,45 @@ namespace SalonGarden.Web.Data
         public void SeedUsers(UserManager<IdentityUser> userManager)
         {
             //educators
-            if (userManager.FindByNameAsync("mkrabappel").Result == null)
+            if (userManager.FindByNameAsync("mkrabappel@thesimpsons.com").Result == null)
             {
-                var mkrabappel = new IdentityUser("mkrabappel") { Email = "mkrabappel@thesimpsons.com" };
+                var mkrabappel = new IdentityUser("mkrabappel@thesimpsons.com") { Email = "mkrabappel@thesimpsons.com" };
                 userManager.CreateAsync(mkrabappel, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(mkrabappel, "Educator").Wait();
             }
 
-            if (userManager.FindByNameAsync("mgarrison").Result == null)
+            if (userManager.FindByNameAsync("mgarrison@southpark.comn").Result == null)
             {
-                var mgarrison = new IdentityUser("mgarrison") { Email = "mgarrison@southpark.com" };
+                var mgarrison = new IdentityUser("mgarrison@southpark.com") { Email = "mgarrison@southpark.com" };
                 userManager.CreateAsync(mgarrison, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(mgarrison, "Educator").Wait();
             }
 
             //students
-            if (userManager.FindByNameAsync("dfunnie").Result == null)
+            if (userManager.FindByNameAsync("dfunnie@doug.com").Result == null)
             {
-                var dfunnie = new IdentityUser("dfunnie") { Email = "dfunnie@doug.com" };
+                var dfunnie = new IdentityUser("dfunnie@doug.com") { Email = "dfunnie@doug.com" };
                 userManager.CreateAsync(dfunnie, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(dfunnie, "Student").Wait();
             }
 
-            if (userManager.FindByNameAsync("pmayonaise").Result == null)
+            if (userManager.FindByNameAsync("pmayonaise@doug.com").Result == null)
             {
-                var pmayonaise = new IdentityUser("pmayonaise") { Email = "pmayonaise@doug.com" };
+                var pmayonaise = new IdentityUser("pmayonaise@doug.com") { Email = "pmayonaise@doug.com" };
                 userManager.CreateAsync(pmayonaise, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(pmayonaise, "Student").Wait();
             }
 
-            if (userManager.FindByNameAsync("svalentine").Result == null)
+            if (userManager.FindByNameAsync("svalentine@doug.com").Result == null)
             {
-                var svalentine = new IdentityUser("svalentine") { Email = "svalentine@doug.com" };
+                var svalentine = new IdentityUser("svalentine@doug.com") { Email = "svalentine@doug.com" };
                 userManager.CreateAsync(svalentine, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(svalentine, "Student").Wait();
             }
 
-            if (userManager.FindByNameAsync("jfunnie").Result == null)
+            if (userManager.FindByNameAsync("jfunnie@doug.com").Result == null)
             {
-                var jfunnie = new IdentityUser("jfunnie") { Email = "jfunnie@doug.com" };
+                var jfunnie = new IdentityUser("jfunnie@doug.com") { Email = "jfunnie@doug.com" };
                 userManager.CreateAsync(jfunnie, "P@ssw0rd!").Wait();
                 userManager.AddToRoleAsync(jfunnie, "Student").Wait();
             }
