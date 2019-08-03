@@ -27,6 +27,7 @@
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.0.0-preview6.19307.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.0.0-preview6.19307.2",
           "Microsoft.AspNetCore.Identity.UI": "3.0.0-preview6.19307.2",
+          "Microsoft.EntityFrameworkCore.InMemory": "2.2.6",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview6.19304.10",
           "Microsoft.EntityFrameworkCore.Sqlite": "3.0.0-preview6.19304.10",
           "Microsoft.EntityFrameworkCore.Tools": "3.0.0-preview6.19304.10",
@@ -756,6 +757,20 @@
         },
         "compile": {
           "lib/netstandard2.0/Microsoft.EntityFrameworkCore.Design.dll": {}
+        }
+      },
+      "Microsoft.EntityFrameworkCore.InMemory/2.2.6": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "3.0.0-preview6.19304.10"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {
+            "assemblyVersion": "2.2.6.0",
+            "fileVersion": "2.2.6.19169"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.EntityFrameworkCore.InMemory.dll": {}
         }
       },
       "Microsoft.EntityFrameworkCore.Relational/3.0.0-preview6.19304.10": {
@@ -4037,6 +4052,13 @@
       "sha512": "sha512-u8BVSXH+myKWV3dyJDr6HRAELCMZeHRwoYimXQ8/VALdyyI96CJm6q58wShSmak+4B4z+TtBy/mjVb2u92noEw==",
       "path": "microsoft.entityframeworkcore.design/3.0.0-preview6.19304.10",
       "hashPath": "microsoft.entityframeworkcore.design.3.0.0-preview6.19304.10.nupkg.sha512"
+    },
+    "Microsoft.EntityFrameworkCore.InMemory/2.2.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PREu4MsAGz3NEheW4TX4e8Bl4l34OrA4R4KFyWb3r475QRS1/ul4vK1mUzWF/fEwJgx7n1h1tvNZW7I04sl5fw==",
+      "path": "microsoft.entityframeworkcore.inmemory/2.2.6",
+      "hashPath": "microsoft.entityframeworkcore.inmemory.2.2.6.nupkg.sha512"
     },
     "Microsoft.EntityFrameworkCore.Relational/3.0.0-preview6.19304.10": {
       "type": "package",

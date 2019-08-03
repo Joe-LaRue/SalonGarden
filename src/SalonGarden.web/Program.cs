@@ -16,6 +16,7 @@ namespace SalonGarden.Web
     {
         public static void Main(string[] args)
         {
+
             var hostBuilder = CreateHostBuilder(args);
 
             var host = hostBuilder.Build();

@@ -159,7 +159,6 @@ C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\ru\Microsoft.Cod
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\tr\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
-C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Evaluations\Create.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Evaluations\Delete.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Evaluations\Details.cshtml.g.cs
@@ -176,3 +175,5 @@ C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Eval
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\EvaluationCriterias\Details.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\EvaluationCriterias\Edit.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\EvaluationCriterias\Index.cshtml.g.cs
+C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.InMemory.dll
+C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cs

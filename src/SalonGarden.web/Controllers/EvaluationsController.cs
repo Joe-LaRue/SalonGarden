@@ -1,7 +1,9 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -14,10 +16,12 @@ namespace SalonGarden.Web.Controllers
     public class EvaluationsController : Controller
     {
         private readonly SalonGardenContext _context;
+        private readonly UserManager<IdentityUser> userManager;
 
-        public EvaluationsController(SalonGardenContext context)
+        public EvaluationsController(SalonGardenContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
+            this.userManager = userManager;
         }
 
         // GET: Evaluations
@@ -55,10 +59,14 @@ namespace SalonGarden.Web.Controllers
         }
 
         // GET: Evaluations/Create
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+
+            var users = userManager.GetUsersInRoleAsync("Student").Result;
+
             ViewData["TechniqueId"] = new SelectList(_context.Set<Technique>(), "Id", "Description");
             ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Description");
+            ViewData["StudentId"] = new SelectList(users, "Id", "UserName");
             return View();
         }
 
@@ -67,7 +75,7 @@ namespace SalonGarden.Web.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,EvaluationTypeId,EvaluationStatusId,TechniqueId,Description,EducatorId,StudentId,CreationDate")] Evaluation evaluation)
+        public async Task<IActionResult> Create(Evaluation evaluation)
         {
             if (ModelState.IsValid)
             {
@@ -75,8 +83,12 @@ namespace SalonGarden.Web.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["EvaluationStatusId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Id", evaluation.EvaluationStatusId);
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Id", evaluation.EvaluationTypeId);
+
+
+
+
+            ViewData["StudentId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Description", evaluation.EvaluationStatusId);
+            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Description", evaluation.EvaluationTypeId);
             return View(evaluation);
         }
 
