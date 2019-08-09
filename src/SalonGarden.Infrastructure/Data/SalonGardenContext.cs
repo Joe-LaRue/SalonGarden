@@ -13,7 +13,8 @@ namespace SalonGarden.Infrastructure.Data
         public DbSet<EvaluationStatus> EvaluationStatuses { get; set; }
         public DbSet<EvaluationCriteria> EvaluationCriterias { get; set; }
         public DbSet<EvaluationCriteriaGroup> EvaluationCriteriaGroups { get; set; }
-        
+        public DbSet<EvaluationType> EvaluationTypes { get; set; }
+
         public SalonGardenContext(DbContextOptions<SalonGardenContext> options) : base(options)
         {
 
@@ -29,6 +30,7 @@ namespace SalonGarden.Infrastructure.Data
             modelBuilder.Entity<EvaluationCriteriaGroup>().HasData(SeedData.EvaluationCriteriaGroups());
             modelBuilder.Entity<EvaluationCriteria>().HasData(SeedData.EvaluationCriterias());
             modelBuilder.Entity<EvaluationStatus>().HasData(SeedData.EvaluationStatuses());
+            modelBuilder.Entity<EvaluationType>().HasData(SeedData.EvaluationTypes());
         }
     }
 }

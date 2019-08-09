@@ -1,4 +1,4 @@
-﻿@model SalonGarden.Core.Entities.Evaluation
+﻿@model CreateEvaluationViewModel
 
 @{
     ViewData["Title"] = "Create";
@@ -12,30 +12,24 @@
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label class="control-label">Student</label>
-                <select asp-for="StudentId" class="form-control" asp-items="ViewBag.StudentId">
+                <select asp-for="SelectedStudentId" class="form-control" asp-items="Model.UsersSelectList">
                     <option>Select</option>
                 </select>
-                <span asp-validation-for="StudentId" class="text-danger"></span>
+                <span asp-validation-for="SelectedStudentId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label class="control-label">Type</label>
-                <select asp-for="EvaluationTypeId" class="form-control" asp-items="ViewBag.EvaluationTypeId">
+                <select asp-for="SelectedEvaluationTypeId" class="form-control" asp-items="Model.EvaluationTypesSelectList">
                     <option>Select</option>
                 </select>
             </div>
             <div class="form-group">
                 <label class="control-label">Technique</label>
-                <select asp-for="TechniqueId" class="form-control" asp-items="ViewBag.TechniqueId">
+                <select asp-for="SelectedTechniqueId" class="form-control" asp-items="Model.TechniqueSelectList">
                     <option>Select</option>
                 </select>
-                <span asp-validation-for="TechniqueId" class="text-danger"></span>
+                <span asp-validation-for="SelectedTechniqueId" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <textarea asp-for="Description" class="form-control"></textarea>
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-
 
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />

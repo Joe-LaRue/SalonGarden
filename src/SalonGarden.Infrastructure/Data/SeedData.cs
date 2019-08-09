@@ -151,5 +151,12 @@ namespace SalonGarden.Infrastructure.Data
                     new Technique(){ Id = 12, TechniqueTypeId = 2, Description = "Long Layer"}
                 };
         }
+        public static List<EvaluationType> EvaluationTypes()
+        {
+            return new List<EvaluationType>() {
+                new EvaluationType(){ Id = 1, Description = "Test" },
+                new EvaluationType(){ Id = 2, Description = "Practice" },
+            };
+        }
     }
 }

@@ -15,7 +15,7 @@ namespace SalonGarden.Web
     public class Program
     {
         public static void Main(string[] args)
-        {
+        {           
 
             var hostBuilder = CreateHostBuilder(args);
 

@@ -59,37 +59,34 @@ namespace SalonGarden.Web.Controllers
         }
 
         // GET: Evaluations/Create
-        public async Task<IActionResult> Create()
+        public IActionResult Create()
         {
 
             var users = userManager.GetUsersInRoleAsync("Student").Result;
 
-            ViewData["TechniqueId"] = new SelectList(_context.Set<Technique>(), "Id", "Description");
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Description");
-            ViewData["StudentId"] = new SelectList(users, "Id", "UserName");
-            return View();
+            var viewModel = new CreateEvaluationViewModel()
+            {
+                TechniqueSelectList = new SelectList(_context.Techniques.OrderBy(x => x.Description).ToList(), "Id", "Description"),
+                EvaluationTypesSelectList = new SelectList(_context.EvaluationTypes.OrderBy(x => x.Description).ToList(), "Id", "Description"),
+                UsersSelectList = new SelectList(users.OrderBy(x => x.UserName), "Id", "UserName")
+            };
+
+            return View(viewModel);
         }
 
-        // POST: Evaluations/Create
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Evaluation evaluation)
+        public async Task<IActionResult> Create(CreateEvaluationViewModel createEvaluationViewModel)
         {
             if (ModelState.IsValid)
             {
-                _context.Add(evaluation);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //_context.Add(evaluation);
+                //await _context.SaveChangesAsync();
+                //return RedirectToAction(nameof(Index));
             }
 
 
-
-
-            ViewData["StudentId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Description", evaluation.EvaluationStatusId);
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Description", evaluation.EvaluationTypeId);
-            return View(evaluation);
+            return View(createEvaluationViewModel);
         }
 
         // GET: Evaluations/Edit/5

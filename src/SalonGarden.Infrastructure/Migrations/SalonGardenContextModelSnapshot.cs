@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SalonGarden.Infrastructure.Data;
 
@@ -14,12 +15,15 @@ namespace SalonGarden.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "3.0.0-preview6.19304.10");
+                .HasAnnotation("ProductVersion", "3.0.0-preview6.19304.10")
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
+                .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
             modelBuilder.Entity("SalonGarden.Core.Entities.Evaluation", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<DateTime>("CreationDate");
 
@@ -41,13 +45,16 @@ namespace SalonGarden.Infrastructure.Migrations
 
                     b.HasIndex("EvaluationTypeId");
 
+                    b.HasIndex("TechniqueId");
+
                     b.ToTable("Evaluations");
                 });
 
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationCriteria", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
@@ -237,7 +244,8 @@ namespace SalonGarden.Infrastructure.Migrations
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationCriteriaGroup", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
@@ -283,7 +291,8 @@ namespace SalonGarden.Infrastructure.Migrations
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationDetailItem", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<int>("AllocatedPoints");
 
@@ -301,7 +310,8 @@ namespace SalonGarden.Infrastructure.Migrations
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationStatus", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
@@ -325,25 +335,41 @@ namespace SalonGarden.Infrastructure.Migrations
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationType", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
                     b.HasKey("Id");
 
-                    b.ToTable("EvaluationType");
+                    b.ToTable("EvaluationTypes");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Test"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Practice"
+                        });
                 });
 
             modelBuilder.Entity("SalonGarden.Core.Entities.Technique", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
                     b.Property<int>("TechniqueTypeId");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("TechniqueTypeId");
 
                     b.ToTable("Techniques");
 
@@ -425,7 +451,8 @@ namespace SalonGarden.Infrastructure.Migrations
             modelBuilder.Entity("SalonGarden.Core.Entities.TechniqueType", b =>
                 {
                     b.Property<int>("Id")
-                        .ValueGeneratedOnAdd();
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Description");
 
@@ -459,6 +486,12 @@ namespace SalonGarden.Infrastructure.Migrations
                         .HasForeignKey("EvaluationTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.HasOne("SalonGarden.Core.Entities.Technique", "Technique")
+                        .WithMany()
+                        .HasForeignKey("TechniqueId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationCriteria", b =>
@@ -475,6 +508,15 @@ namespace SalonGarden.Infrastructure.Migrations
                     b.HasOne("SalonGarden.Core.Entities.Evaluation", null)
                         .WithMany("EvaluationDetailItems")
                         .HasForeignKey("EvaluationId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("SalonGarden.Core.Entities.Technique", b =>
+                {
+                    b.HasOne("SalonGarden.Core.Entities.TechniqueType", "TechniqueType")
+                        .WithMany()
+                        .HasForeignKey("TechniqueTypeId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

@@ -12,3 +12,6 @@ c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Te
 c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.AssemblyInfo.cs
 c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.dll
 c:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.pdb
+C:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Core.dll
+C:\code\SalonGarden\src\SalonGarden.Tests\bin\Debug\netcoreapp2.2\SalonGarden.Core.pdb
+C:\code\SalonGarden\src\SalonGarden.Tests\obj\Debug\netcoreapp2.2\SalonGarden.Tests.csproj.CopyComplete
