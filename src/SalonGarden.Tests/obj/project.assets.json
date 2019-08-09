@@ -1723,16 +1723,6 @@
         "runtime": {
           "lib/netstandard1.1/xunit.execution.dotnet.dll": {}
         }
-      },
-      "SalonGarden.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/SalonGarden.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalonGarden.Core.dll": {}
-        }
       }
     }
   },
@@ -5984,11 +5974,6 @@
         "xunit.extensibility.execution.2.4.1.nupkg.sha512",
         "xunit.extensibility.execution.nuspec"
       ]
-    },
-    "SalonGarden.Core/1.0.0": {
-      "type": "project",
-      "path": "../SalonGarden.Core/SalonGarden.Core.csproj",
-      "msbuildProject": "../SalonGarden.Core/SalonGarden.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -5997,7 +5982,6 @@
       "Microsoft.NETCore.App >= 2.2.0",
       "Moq >= 4.12.0",
       "NUnit3TestAdapter >= 3.11.0",
-      "SalonGarden.Core >= 1.0.0",
       "nunit >= 3.11.0",
       "xunit.core >= 2.4.1"
     ]
@@ -6031,11 +6015,7 @@
       },
       "frameworks": {
         "netcoreapp2.2": {
-          "projectReferences": {
-            "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-              "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

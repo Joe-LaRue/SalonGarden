@@ -4,63 +4,6 @@
     "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {}
   },
   "projects": {
-    "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
-        "projectName": "SalonGarden.Core",
-        "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj",
-        "packagesPath": "C:\\Users\\jlarue\\.nuget\\packages\\",
-        "outputPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\obj\\",
-        "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
-        "configFilePaths": [
-          "C:\\Users\\jlarue\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "netstandard2.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "netstandard2.0": {
-            "projectReferences": {}
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        }
-      },
-      "frameworks": {
-        "netstandard2.0": {
-          "dependencies": {
-            "NETStandard.Library": {
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[2.0.3, )",
-              "autoReferenced": true
-            }
-          },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true
-        }
-      }
-    },
     "C:\\code\\SalonGarden\\src\\SalonGarden.Tests\\SalonGarden.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -86,11 +29,7 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {
-              "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-                "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
-              }
-            }
+            "projectReferences": {}
           }
         },
         "warningProperties": {

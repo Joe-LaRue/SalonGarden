@@ -23,8 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SalonGarden.Core\SalonGarden.Core.csproj" />
-    <ProjectReference Include="..\SalonGarden.Infrastructure\SalonGarden.Infrastructure.csproj" />
+    <Folder Include="Services\" />
   </ItemGroup>
 
 </Project>

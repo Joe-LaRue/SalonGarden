@@ -2542,32 +2542,6 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XDocument.dll": {}
         }
-      },
-      "SalonGarden.Core/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "compile": {
-          "bin/placeholder/SalonGarden.Core.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalonGarden.Core.dll": {}
-        }
-      },
-      "SalonGarden.Infrastructure/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.0",
-        "dependencies": {
-          "Microsoft.EntityFrameworkCore": "3.0.0-preview6.19304.10",
-          "Microsoft.EntityFrameworkCore.Relational": "3.0.0-preview6.19304.10",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.0.0-preview6.19304.10",
-          "SalonGarden.Core": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/SalonGarden.Infrastructure.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/SalonGarden.Infrastructure.dll": {}
-        }
       }
     }
   },
@@ -7943,16 +7917,6 @@
         "system.xml.xdocument.4.3.0.nupkg.sha512",
         "system.xml.xdocument.nuspec"
       ]
-    },
-    "SalonGarden.Core/1.0.0": {
-      "type": "project",
-      "path": "../SalonGarden.Core/SalonGarden.Core.csproj",
-      "msbuildProject": "../SalonGarden.Core/SalonGarden.Core.csproj"
-    },
-    "SalonGarden.Infrastructure/1.0.0": {
-      "type": "project",
-      "path": "../SalonGarden.Infrastructure/SalonGarden.Infrastructure.csproj",
-      "msbuildProject": "../SalonGarden.Infrastructure/SalonGarden.Infrastructure.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -7966,9 +7930,7 @@
       "Microsoft.EntityFrameworkCore.Tools >= 3.0.0-preview6.19304.10",
       "Microsoft.Extensions.Logging.Debug >= 3.0.0-preview6.19304.6",
       "Microsoft.NETCore.App >= 3.0.0-preview6-27804-01",
-      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0-preview6-19319-03",
-      "SalonGarden.Core >= 1.0.0",
-      "SalonGarden.Infrastructure >= 1.0.0"
+      "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 3.0.0-preview6-19319-03"
     ]
   },
   "packageFolders": {
@@ -8000,14 +7962,7 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "projectReferences": {
-            "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj": {
-              "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Core\\SalonGarden.Core.csproj"
-            },
-            "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj": {
-              "projectPath": "C:\\code\\SalonGarden\\src\\SalonGarden.Infrastructure\\SalonGarden.Infrastructure.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {

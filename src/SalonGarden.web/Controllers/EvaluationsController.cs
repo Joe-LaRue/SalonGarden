@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalonGarden.Core.Entities;
-using SalonGarden.Infrastructure.Data;
+using SalonGarden.Web.Data.SalonGarden;
 using SalonGarden.Web.Models;
 
 namespace SalonGarden.Web.Controllers

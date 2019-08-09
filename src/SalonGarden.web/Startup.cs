@@ -12,7 +12,7 @@ using SalonGarden.Web.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SalonGarden.Infrastructure.Data;
+using SalonGarden.Web.Data.SalonGarden;
 
 namespace SalonGarden.Web
 {
