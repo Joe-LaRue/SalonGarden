@@ -16,12 +16,12 @@ namespace SalonGarden.Web.Controllers
     public class EvaluationsController : Controller
     {
         private readonly SalonGardenContext _context;
-        private readonly UserManager<IdentityUser> userManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
         public EvaluationsController(SalonGardenContext context, UserManager<IdentityUser> userManager)
         {
             _context = context;
-            this.userManager = userManager;
+            this._userManager = userManager;
         }
 
         // GET: Evaluations
@@ -62,7 +62,7 @@ namespace SalonGarden.Web.Controllers
         public IActionResult Create()
         {
 
-            var users = userManager.GetUsersInRoleAsync("Student").Result;
+            var users = _userManager.GetUsersInRoleAsync("Student").Result;
 
             var viewModel = new CreateEvaluationViewModel()
             {
@@ -76,17 +76,32 @@ namespace SalonGarden.Web.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(CreateEvaluationViewModel createEvaluationViewModel)
+        public async Task<IActionResult> Create(CreateEvaluationViewModel viewModel)
         {
             if (ModelState.IsValid)
             {
-                //_context.Add(evaluation);
-                //await _context.SaveChangesAsync();
-                //return RedirectToAction(nameof(Index));
+                var currentUser = _userManager.FindByEmailAsync(User.Identity.Name).Result;
+                var evaluation = new Evaluation(viewModel.SelectedEvaluationTypeId, viewModel.SelectedTechniqueId, currentUser.Id, viewModel.SelectedStudentId);
+
+                _context.Add(evaluation);
+                await _context.SaveChangesAsync();
+
+                var evaluationCriteria = _context.EvaluationCriterias.ToList();
+
+                evaluation.InitializeEvaluationStepEntries(evaluationCriteria);
+                await _context.SaveChangesAsync();
+
+                return RedirectToAction(nameof(Details), new { id = evaluation.Id });
             }
 
+            
+            var users = _userManager.GetUsersInRoleAsync("Student").Result;
 
-            return View(createEvaluationViewModel);
+            viewModel.TechniqueSelectList = new SelectList(_context.Techniques.OrderBy(x => x.Description).ToList(), "Id", "Description");
+            viewModel.EvaluationTypesSelectList = new SelectList(_context.EvaluationTypes.OrderBy(x => x.Description).ToList(), "Id", "Description");
+            viewModel.UsersSelectList = new SelectList(users.OrderBy(x => x.UserName), "Id", "UserName");
+
+            return View(viewModel);
         }
 
         // GET: Evaluations/Edit/5

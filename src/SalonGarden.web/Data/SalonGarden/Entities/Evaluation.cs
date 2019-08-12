@@ -25,13 +25,16 @@ namespace SalonGarden.Core.Entities
 
         }
 
-        public Evaluation(int evaluationTypeId, int techniqueId, string description, string educatorId, string studentId)
+        public Evaluation(int evaluationTypeId, int techniqueId, string educatorId, string studentId)
         {
             this.EvaluationTypeId = evaluationTypeId;
             this.TechniqueId = techniqueId;
-            this.Description = description;
             this.EducatorId = educatorId;
             this.StudentId = studentId;
+            this.EvaluationStatusId = (int)EvaluationStatuses.Open;
+            this.CreationDate = DateTime.Now;
+
+
         }
 
         public void InitializeEvaluationStepEntries(IReadOnlyCollection<EvaluationCriteria> evaluationCriteria)
