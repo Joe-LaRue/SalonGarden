@@ -18,14 +18,12 @@ namespace AspNetCore
         #pragma warning disable 1998
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
-#nullable restore
 #line 1 "C:\code\SalonGarden\src\SalonGarden.web\Areas\Identity\Pages\_ViewStart.cshtml"
   
     Layout = "/Views/Shared/_Layout.cshtml";
 
 #line default
 #line hidden
-#nullable disable
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

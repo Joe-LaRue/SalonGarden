@@ -1,15 +1,44 @@
-﻿@model SalonGarden.Core.Entities.Evaluation
+﻿@model SalonGarden.Web.Models.EvaluationDetailVIewModel
 
 @{
     ViewData["Title"] = "Details";
 }
 
 
-    <h3>Evaluation Details</h3>
+<h3>Evaluation Details</h3>
 
+<div class="row">
+    <div class="col-4">
+        <b>Student</b> <br/>
+        @Model.Student.Email
+    </div>
+    <div class="col-4">
+        <b>Educator</b> <br/>
+        @Model.Educator.UserName
+    </div>
+    <div class="col-4">
+         <b>Created</b> <br/>
+        @Model.Evaluation.CreationDate.ToShortDateString()
+    </div>
+</div>
+
+@foreach (var criteriaGroup in Model.CriteriaGroups.OrderBy(x => x.SequenceNumber))
+{
+   <div class="border bg-light p-2 mb-2"> 
+       <h4>@criteriaGroup.Description</h4>
+        @foreach (var criteria in criteriaGroup.EvaluationCriteria.OrderBy(x => x.SequenceNumber))
+        {
+            <b>@criteria.Description</b> 
+            <span>
+                @Model.Evaluation.EvaluationDetailItems.First(x => x.EvaluationCriteriaId == criteria.Id).AllocatedPoints
+            </span>
+            <br />
+        }
+    </div>
+}
 
 
 <div>
-    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Edit" asp-route-id="@Model.Evaluation.Id">Edit</a> |
     <a asp-action="Index">Back to List</a>
 </div>

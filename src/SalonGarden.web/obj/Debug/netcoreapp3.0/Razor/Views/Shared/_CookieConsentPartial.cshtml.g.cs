@@ -12,27 +12,21 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
 #line 1 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 2 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web.Models;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 1 "C:\code\SalonGarden\src\SalonGarden.web\Views\Shared\_CookieConsentPartial.cshtml"
 using Microsoft.AspNetCore.Http.Features;
 
 #line default
 #line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"a84db7404be42a11563303bbe2a00fa42a11ee10", @"/Views/Shared/_CookieConsentPartial.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cfd612c5402d182ccd0bb70ebbbce1a236370f52", @"/Views/_ViewImports.cshtml")]
     public class Views_Shared__CookieConsentPartial : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<dynamic>
@@ -66,7 +60,6 @@ using Microsoft.AspNetCore.Http.Features;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-#nullable restore
 #line 3 "C:\code\SalonGarden\src\SalonGarden.web\Views\Shared\_CookieConsentPartial.cshtml"
   
     var consentFeature = Context.Features.Get<ITrackingConsentFeature>();
@@ -75,18 +68,15 @@ using Microsoft.AspNetCore.Http.Features;
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n");
-#nullable restore
 #line 9 "C:\code\SalonGarden\src\SalonGarden.web\Views\Shared\_CookieConsentPartial.cshtml"
  if (showBanner)
 {
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("    <div id=\"cookieConsent\" class=\"alert alert-info alert-dismissible fade show\" role=\"alert\">\r\n        Use this space to summarize your privacy and cookie use policy. ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a84db7404be42a11563303bbe2a00fa42a11ee105359", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "a84db7404be42a11563303bbe2a00fa42a11ee105169", async() => {
                 WriteLiteral("Learn More");
             }
             );
@@ -107,13 +97,11 @@ using Microsoft.AspNetCore.Http.Features;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(".\r\n        <button type=\"button\" class=\"accept-policy close\" data-dismiss=\"alert\" aria-label=\"Close\" data-cookie-string=\"");
-#nullable restore
 #line 13 "C:\code\SalonGarden\src\SalonGarden.web\Views\Shared\_CookieConsentPartial.cshtml"
                                                                                                                  Write(cookieString);
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral(@""">
             <span aria-hidden=""true"">Accept</span>
         </button>
@@ -127,13 +115,11 @@ using Microsoft.AspNetCore.Http.Features;
         })();
     </script>
 ");
-#nullable restore
 #line 25 "C:\code\SalonGarden\src\SalonGarden.web\Views\Shared\_CookieConsentPartial.cshtml"
 }
 
 #line default
 #line hidden
-#nullable disable
         }
         #pragma warning restore 1998
         [global::Microsoft.AspNetCore.Mvc.Razor.Internal.RazorInjectAttribute]

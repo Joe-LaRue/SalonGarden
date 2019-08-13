@@ -12,20 +12,16 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
 #line 1 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 2 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web.Models;
 
 #line default
 #line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"fed13fb999cb9d9c36172ba4ccd9d307c948d7d6", @"/Views/Evaluations/Delete.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cfd612c5402d182ccd0bb70ebbbce1a236370f52", @"/Views/_ViewImports.cshtml")]
     public class Views_Evaluations_Delete : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<SalonGarden.Core.Entities.Evaluation>
@@ -61,143 +57,111 @@ using SalonGarden.Web.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-#nullable restore
 #line 3 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
   
     ViewData["Title"] = "Delete";
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n<h1>Delete</h1>\r\n\r\n<h3>Are you sure you want to delete this?</h3>\r\n<div>\r\n    <h4>Evaluation</h4>\r\n    <hr />\r\n    <dl class=\"row\">\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 15 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.EvaluationType));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 18 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.EvaluationType.Id));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd class>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 21 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.EvaluationStatus));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 24 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.EvaluationStatus.Id));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd class>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 27 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.TechniqueId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 30 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.TechniqueId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 33 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.Description));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 36 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.Description));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 39 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.EducatorId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 42 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.EducatorId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 45 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.StudentId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 48 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.StudentId));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd>\r\n        <dt class = \"col-sm-2\">\r\n            ");
-#nullable restore
 #line 51 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayNameFor(model => model.CreationDate));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dt>\r\n        <dd class = \"col-sm-10\">\r\n            ");
-#nullable restore
 #line 54 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
        Write(Html.DisplayFor(model => model.CreationDate));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n        </dd>\r\n    </dl>\r\n    \r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d69267", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d68621", async() => {
                 WriteLiteral("\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d69533", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("input", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.SelfClosing, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d68887", async() => {
                 }
                 );
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper = CreateTagHelper<global::Microsoft.AspNetCore.Mvc.TagHelpers.InputTagHelper>();
                 __tagHelperExecutionContext.Add(__Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper);
                 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.InputTypeName = (string)__tagHelperAttribute_0.Value;
                 __tagHelperExecutionContext.AddTagHelperAttribute(__tagHelperAttribute_0);
-#nullable restore
 #line 59 "C:\code\SalonGarden\src\SalonGarden.web\Views\Evaluations\Delete.cshtml"
 __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvider.CreateModelExpression(ViewData, __model => __model.Id);
 
 #line default
 #line hidden
-#nullable disable
                 __tagHelperExecutionContext.AddTagHelperAttribute("asp-for", __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For, global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
                 await __tagHelperRunner.RunAsync(__tagHelperExecutionContext);
                 if (!__tagHelperExecutionContext.Output.IsContentModified)
@@ -207,7 +171,7 @@ __Microsoft_AspNetCore_Mvc_TagHelpers_InputTagHelper.For = ModelExpressionProvid
                 Write(__tagHelperExecutionContext.Output);
                 __tagHelperExecutionContext = __tagHelperScopeManager.End();
                 WriteLiteral("\r\n        <input type=\"submit\" value=\"Delete\" class=\"btn btn-danger\" /> |\r\n        ");
-                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d611311", async() => {
+                __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "fed13fb999cb9d9c36172ba4ccd9d307c948d7d610627", async() => {
                     WriteLiteral("Back to List");
                 }
                 );

@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalonGarden.Core.Entities;
-using SalonGarden.Web.Data.SalonGarden;
 using SalonGarden.Web.Models;
+using SalonGarden.Web.Data.SalonGarden;
 
 namespace SalonGarden.Web.Controllers
 {
@@ -46,16 +46,30 @@ namespace SalonGarden.Web.Controllers
                 return NotFound();
             }
 
+            var viewModel = new EvaluationDetailVIewModel();
+
+            viewModel.CriteriaGroups = await _context.EvaluationCriteriaGroups.Include(x => x.EvaluationCriteria).ToListAsync();
+
             var evaluation = await _context.Evaluations
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
+                .Include(e => e.EvaluationDetailItems)
                 .FirstOrDefaultAsync(m => m.Id == id);
+
             if (evaluation == null)
             {
                 return NotFound();
             }
 
-            return View(evaluation);
+            viewModel.Evaluation = evaluation;
+
+            var student = await _userManager.FindByIdAsync(evaluation.StudentId);
+            var educator = await _userManager.FindByIdAsync(evaluation.EducatorId);
+
+            viewModel.Student = student;
+            viewModel.Educator = educator;
+
+            return View(viewModel);
         }
 
         // GET: Evaluations/Create

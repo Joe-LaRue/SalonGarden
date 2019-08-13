@@ -12,20 +12,16 @@ namespace AspNetCore
     using Microsoft.AspNetCore.Mvc;
     using Microsoft.AspNetCore.Mvc.Rendering;
     using Microsoft.AspNetCore.Mvc.ViewFeatures;
-#nullable restore
 #line 1 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web;
 
 #line default
 #line hidden
-#nullable disable
-#nullable restore
 #line 2 "C:\code\SalonGarden\src\SalonGarden.web\Views\_ViewImports.cshtml"
 using SalonGarden.Web.Models;
 
 #line default
 #line hidden
-#nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"8fe14e3ac68967620662b34daf01e4bd86c14603", @"/Views/EvaluationCriterias/Index.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"cfd612c5402d182ccd0bb70ebbbce1a236370f52", @"/Views/_ViewImports.cshtml")]
     public class Views_EvaluationCriterias_Index : global::Microsoft.AspNetCore.Mvc.Razor.RazorPage<IEnumerable<SalonGarden.Core.Entities.EvaluationCriteria>>
@@ -59,16 +55,14 @@ using SalonGarden.Web.Models;
         public async override global::System.Threading.Tasks.Task ExecuteAsync()
         {
             WriteLiteral("\r\n");
-#nullable restore
 #line 3 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
   
     ViewData["Title"] = "Index";
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n<h1>Index</h1>\r\n\r\n<p>\r\n    ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c146034622", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c146034508", async() => {
                 WriteLiteral("Create New");
             }
             );
@@ -84,63 +78,49 @@ using SalonGarden.Web.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n</p>\r\n<table class=\"table\">\r\n    <thead>\r\n        <tr>\r\n            <th>\r\n                ");
-#nullable restore
 #line 16 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.Description));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
-#nullable restore
 #line 19 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.SequenceNumber));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th>\r\n                ");
-#nullable restore
 #line 22 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayNameFor(model => model.TotalPoints));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </th>\r\n            <th></th>\r\n        </tr>\r\n    </thead>\r\n    <tbody>\r\n");
-#nullable restore
 #line 28 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
  foreach (var item in Model) {
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("        <tr>\r\n            <td>\r\n                ");
-#nullable restore
 #line 31 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.Description));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
-#nullable restore
 #line 34 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.SequenceNumber));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
-#nullable restore
 #line 37 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
            Write(Html.DisplayFor(modelItem => item.TotalPoints));
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("\r\n            </td>\r\n            <td>\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c146038118", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c146037738", async() => {
                 WriteLiteral("Edit");
             }
             );
@@ -153,13 +133,11 @@ using SalonGarden.Web.Models;
                 throw new InvalidOperationException(InvalidTagHelperIndexerAssignment("asp-route-id", "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper", "RouteValues"));
             }
             BeginWriteTagHelperAttribute();
-#nullable restore
 #line 40 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
                                        WriteLiteral(item.Id);
 
 #line default
 #line hidden
-#nullable disable
             __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"] = __tagHelperStringValueBuffer;
             __tagHelperExecutionContext.AddTagHelperAttribute("asp-route-id", __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"], global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -171,7 +149,7 @@ using SalonGarden.Web.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(" |\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c1460310282", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c146039864", async() => {
                 WriteLiteral("Details");
             }
             );
@@ -184,13 +162,11 @@ using SalonGarden.Web.Models;
                 throw new InvalidOperationException(InvalidTagHelperIndexerAssignment("asp-route-id", "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper", "RouteValues"));
             }
             BeginWriteTagHelperAttribute();
-#nullable restore
 #line 41 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
                                           WriteLiteral(item.Id);
 
 #line default
 #line hidden
-#nullable disable
             __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"] = __tagHelperStringValueBuffer;
             __tagHelperExecutionContext.AddTagHelperAttribute("asp-route-id", __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"], global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -202,7 +178,7 @@ using SalonGarden.Web.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral(" |\r\n                ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c1460312453", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "8fe14e3ac68967620662b34daf01e4bd86c1460311996", async() => {
                 WriteLiteral("Delete");
             }
             );
@@ -215,13 +191,11 @@ using SalonGarden.Web.Models;
                 throw new InvalidOperationException(InvalidTagHelperIndexerAssignment("asp-route-id", "Microsoft.AspNetCore.Mvc.TagHelpers.AnchorTagHelper", "RouteValues"));
             }
             BeginWriteTagHelperAttribute();
-#nullable restore
 #line 42 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
                                          WriteLiteral(item.Id);
 
 #line default
 #line hidden
-#nullable disable
             __tagHelperStringValueBuffer = EndWriteTagHelperAttribute();
             __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"] = __tagHelperStringValueBuffer;
             __tagHelperExecutionContext.AddTagHelperAttribute("asp-route-id", __Microsoft_AspNetCore_Mvc_TagHelpers_AnchorTagHelper.RouteValues["id"], global::Microsoft.AspNetCore.Razor.TagHelpers.HtmlAttributeValueStyle.DoubleQuotes);
@@ -233,13 +207,11 @@ using SalonGarden.Web.Models;
             Write(__tagHelperExecutionContext.Output);
             __tagHelperExecutionContext = __tagHelperScopeManager.End();
             WriteLiteral("\r\n            </td>\r\n        </tr>\r\n");
-#nullable restore
 #line 45 "C:\code\SalonGarden\src\SalonGarden.web\Views\EvaluationCriterias\Index.cshtml"
 }
 
 #line default
 #line hidden
-#nullable disable
             WriteLiteral("    </tbody>\r\n</table>\r\n");
         }
         #pragma warning restore 1998
