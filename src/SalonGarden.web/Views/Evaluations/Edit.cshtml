@@ -1,59 +1,49 @@
-﻿@model SalonGarden.Core.Entities.Evaluation
+﻿@model SalonGarden.Web.Models.EditEvaluationViewModel
 
 @{
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit</h1>
-
-<h4>Evaluation</h4>
-<hr />
-<div class="row">
-    <div class="col-md-4">
-        <form asp-action="Edit">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
-            <div class="form-group">
-                <label asp-for="EvaluationTypeId" class="control-label"></label>
-                <select asp-for="EvaluationTypeId" class="form-control" asp-items="ViewBag.EvaluationTypeId"></select>
-                <span asp-validation-for="EvaluationTypeId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EvaluationStatusId" class="control-label"></label>
-                <select asp-for="EvaluationStatusId" class="form-control" asp-items="ViewBag.EvaluationStatusId"></select>
-                <span asp-validation-for="EvaluationStatusId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="TechniqueId" class="control-label"></label>
-                <input asp-for="TechniqueId" class="form-control" />
-                <span asp-validation-for="TechniqueId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="EducatorId" class="control-label"></label>
-                <input asp-for="EducatorId" class="form-control" />
-                <span asp-validation-for="EducatorId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="StudentId" class="control-label"></label>
-                <input asp-for="StudentId" class="form-control" />
-                <span asp-validation-for="StudentId" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="CreationDate" class="control-label"></label>
-                <input asp-for="CreationDate" class="form-control" />
-                <span asp-validation-for="CreationDate" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
+<div class="border bg-light p-2 mb-2">
+    <div class="row">
+        <div class="col-3">
+            <b>Student</b> <br />
+            @Model.Student.Email
+        </div>
+        <div class="col-3">
+            <b>Educator</b> <br />
+            @Model.Educator.UserName
+        </div>
+        <div class="col-3">
+            <b>Created</b> <br />
+            @Model.Evaluation.CreationDate.ToShortDateString()
+        </div>
+        <div class="col-3">
+            <b>Technique</b> <br />
+            @Model.Evaluation.Technique.Description
+        </div>
     </div>
 </div>
+
+@foreach (var criteriaGroup in Model.CriteriaGroups.OrderBy(x => x.SequenceNumber))
+{
+    <div class="border p-2 mb-2">
+        <h4>@criteriaGroup.Description</h4>
+        @foreach (var criteria in criteriaGroup.EvaluationCriteria.OrderBy(x => x.SequenceNumber))
+        {
+            var detailItem = Model.Evaluation.EvaluationDetailItems.First(x => x.Id == criteria.Id);
+            <div class="d-flex mb-2 border bg-light p-2">
+                <div>
+                    <span>@criteria.Description</span>
+                </div>
+                <div class="ml-auto">
+                    <input class="form-control scoreInput" data-detailItemId="@detailItem.Id" value="@detailItem.AllocatedPoints " />
+                </div>
+            </div>
+        }
+    </div>
+}
+
 
 <div>
     <a asp-action="Index">Back to List</a>

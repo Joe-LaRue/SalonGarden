@@ -126,14 +126,29 @@ namespace SalonGarden.Web.Controllers
                 return NotFound();
             }
 
-            var evaluation = await _context.Evaluations.FindAsync(id);
+            var viewModel = new EditEvaluationViewModel();
+
+            viewModel.CriteriaGroups = await _context.EvaluationCriteriaGroups.Include(x => x.EvaluationCriteria).ToListAsync();
+
+            var evaluation = await _context.Evaluations
+                .Include(e => e.EvaluationStatus)
+                .Include(e => e.EvaluationType)
+                .Include(e => e.EvaluationDetailItems)
+                .FirstOrDefaultAsync(m => m.Id == id);
+
             if (evaluation == null)
             {
                 return NotFound();
             }
-            ViewData["EvaluationStatusId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Id", evaluation.EvaluationStatusId);
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Id", evaluation.EvaluationTypeId);
-            return View(evaluation);
+
+            viewModel.Evaluation = evaluation;
+
+            var student = await _userManager.FindByIdAsync(evaluation.StudentId);
+            var educator = await _userManager.FindByIdAsync(evaluation.EducatorId);
+
+            viewModel.Student = student;
+            viewModel.Educator = educator;
+            return View(viewModel);
         }
 
         // POST: Evaluations/Edit/5
