@@ -134,6 +134,7 @@ namespace SalonGarden.Web.Controllers
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
                 .Include(e => e.EvaluationDetailItems)
+                .Include(e => e.Technique)
                 .FirstOrDefaultAsync(m => m.Id == id);
 
             if (evaluation == null)

@@ -31,13 +31,22 @@
         <h4>@criteriaGroup.Description</h4>
         @foreach (var criteria in criteriaGroup.EvaluationCriteria.OrderBy(x => x.SequenceNumber))
         {
-            var detailItem = Model.Evaluation.EvaluationDetailItems.First(x => x.Id == criteria.Id);
+            var detailItem = Model.Evaluation.EvaluationDetailItems.First(x => x.EvaluationCriteriaId == criteria.Id);
             <div class="d-flex mb-2 border bg-light p-2">
                 <div>
                     <span>@criteria.Description</span>
                 </div>
                 <div class="ml-auto">
-                    <input class="form-control scoreInput" data-detailItemId="@detailItem.Id" value="@detailItem.AllocatedPoints " />
+
+                    @*<input type="number" class="form-control scoreInput w-25" data-detailItemId="@detailItem.Id" value="@detailItem.AllocatedPoints" /> of <b>@criteria.TotalPoints</b>*@
+                    <select class="form-control scoreInput" data-detailItemId="@detailItem.Id">
+                        @for (int i = 0; i < criteria.TotalPoints; i++)
+                        {
+                            <option value="@i">@i</option>
+                        }
+                    </select>
+
+                    @*<input class="form-control scoreInput" data-detailItemId="@detailItem.Id" value="@detailItem.AllocatedPoints" />*@
                 </div>
             </div>
         }
