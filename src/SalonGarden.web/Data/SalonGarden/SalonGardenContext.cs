@@ -14,6 +14,7 @@ namespace SalonGarden.Web.Data.SalonGarden
         public DbSet<EvaluationCriteria> EvaluationCriterias { get; set; }
         public DbSet<EvaluationCriteriaGroup> EvaluationCriteriaGroups { get; set; }
         public DbSet<EvaluationType> EvaluationTypes { get; set; }
+        public DbSet<EvaluationDetailItem> EvaluationDetailItems { get; set; }
 
         public SalonGardenContext(DbContextOptions<SalonGardenContext> options) : base(options)
         {
@@ -24,6 +25,9 @@ namespace SalonGarden.Web.Data.SalonGarden
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<EvaluationCriteriaGroup>().HasMany(x => x.EvaluationCriteria).WithOne().HasForeignKey(x => x.EvaluationCriteriaGroupId);
+
+            //modelBuilder.Entity<Evaluation>().HasMany(x => x.EvaluationDetailItems);
+            modelBuilder.Entity<EvaluationDetailItem>().ToTable("EvaluationDetailItem");
 
             modelBuilder.Entity<TechniqueType>().HasData(SeedData.TechniqueTypes());
             modelBuilder.Entity<Technique>().HasData(SeedData.Techniques());

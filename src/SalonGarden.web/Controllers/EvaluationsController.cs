@@ -118,7 +118,7 @@ namespace SalonGarden.Web.Controllers
             return View(viewModel);
         }
 
-        // GET: Evaluations/Edit/5
+       
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -152,43 +152,8 @@ namespace SalonGarden.Web.Controllers
             return View(viewModel);
         }
 
-        // POST: Evaluations/Edit/5
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,EvaluationTypeId,EvaluationStatusId,TechniqueId,Description,EducatorId,StudentId,CreationDate")] Evaluation evaluation)
-        {
-            if (id != evaluation.Id)
-            {
-                return NotFound();
-            }
-
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    _context.Update(evaluation);
-                    await _context.SaveChangesAsync();
-                }
-                catch (DbUpdateConcurrencyException)
-                {
-                    if (!EvaluationExists(evaluation.Id))
-                    {
-                        return NotFound();
-                    }
-                    else
-                    {
-                        throw;
-                    }
-                }
-                return RedirectToAction(nameof(Index));
-            }
-            ViewData["EvaluationStatusId"] = new SelectList(_context.Set<EvaluationStatus>(), "Id", "Id", evaluation.EvaluationStatusId);
-            ViewData["EvaluationTypeId"] = new SelectList(_context.Set<EvaluationType>(), "Id", "Id", evaluation.EvaluationTypeId);
-            return View(evaluation);
-        }
-
+        
+      
         // GET: Evaluations/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
@@ -220,9 +185,17 @@ namespace SalonGarden.Web.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        private bool EvaluationExists(int id)
+        public IActionResult UpdateScore(int detailItemId, int score)
         {
-            return _context.Evaluations.Any(e => e.Id == id);
+            var detailItem = _context.EvaluationDetailItems.FirstOrDefault(x => x.Id == detailItemId);
+            if (detailItem != null)
+            {
+                detailItem.AllocatedPoints = score;
+                _context.SaveChanges();
+                return Ok();
+            }
+
+            return BadRequest();
         }
     }
 }

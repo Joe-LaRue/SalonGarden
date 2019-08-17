@@ -5,6 +5,10 @@
     <UserSecretsId>aspnet-SalonGarden.Web-B0E1D4DA-3B4B-4B29-91FB-0DB008780FCD</UserSecretsId>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
 
   <ItemGroup>
     <None Update="app.db.old" CopyToOutputDirectory="PreserveNewest" />

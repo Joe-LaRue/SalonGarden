@@ -11,7 +11,6 @@
           "Microsoft.NET.Test.Sdk": "15.9.0",
           "Moq": "4.12.0",
           "NUnit3TestAdapter": "3.11.0",
-          "SalonGarden.Core": "1.0.0",
           "NUnit": "3.11.0",
           "xunit.core": "2.4.1"
         },
@@ -1039,11 +1038,6 @@
             "fileVersion": "2.4.1.0"
           }
         }
-      },
-      "SalonGarden.Core/1.0.0": {
-        "runtime": {
-          "SalonGarden.Core.dll": {}
-        }
       }
     }
   },
@@ -1591,11 +1585,6 @@
       "sha512": "sha512-7e/1jqBpcb7frLkB6XDrHCGXAbKN4Rtdb88epYxCSRQuZDRW8UtTfdTEVpdTl8s4T56e07hOBVd4G0OdCxIY2A==",
       "path": "xunit.extensibility.execution/2.4.1",
       "hashPath": "xunit.extensibility.execution.2.4.1.nupkg.sha512"
-    },
-    "SalonGarden.Core/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

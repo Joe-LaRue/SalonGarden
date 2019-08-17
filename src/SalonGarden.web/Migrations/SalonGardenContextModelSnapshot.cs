@@ -77,7 +77,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Warm Welcome",
                             EvaluationCriteriaGroupId = 1,
                             SequenceNumber = 1,
-                            TotalPoints = 0
+                            TotalPoints = 4
                         },
                         new
                         {
@@ -85,7 +85,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Introduction",
                             EvaluationCriteriaGroupId = 1,
                             SequenceNumber = 2,
-                            TotalPoints = 0
+                            TotalPoints = 4
                         },
                         new
                         {
@@ -93,7 +93,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Sensory Experience",
                             EvaluationCriteriaGroupId = 2,
                             SequenceNumber = 1,
-                            TotalPoints = 0
+                            TotalPoints = 4
                         },
                         new
                         {
@@ -101,7 +101,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Listening Skills",
                             EvaluationCriteriaGroupId = 2,
                             SequenceNumber = 2,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -109,7 +109,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Appropriate Questions",
                             EvaluationCriteriaGroupId = 2,
                             SequenceNumber = 3,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -117,7 +117,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Maintenance/Product Reccomendations",
                             EvaluationCriteriaGroupId = 2,
                             SequenceNumber = 4,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -125,7 +125,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Review/Agreement",
                             EvaluationCriteriaGroupId = 2,
                             SequenceNumber = 5,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -133,7 +133,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Shampoo/Massage/Cleanup",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 1,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -141,7 +141,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Clean Sections",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 2,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -149,7 +149,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Body Position",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 3,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -157,7 +157,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Knowledge of Technique",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 4,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -165,7 +165,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Control",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 5,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -173,7 +173,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Cross Check/Balance",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 6,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -181,7 +181,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Completed On Time",
                             EvaluationCriteriaGroupId = 3,
                             SequenceNumber = 7,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -189,7 +189,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Appropriate Conversation",
                             EvaluationCriteriaGroupId = 4,
                             SequenceNumber = 1,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -197,7 +197,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Personal Appearance",
                             EvaluationCriteriaGroupId = 4,
                             SequenceNumber = 2,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -205,7 +205,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Ask for Referrals/Rebooks",
                             EvaluationCriteriaGroupId = 4,
                             SequenceNumber = 3,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -213,7 +213,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Explanation of Products",
                             EvaluationCriteriaGroupId = 5,
                             SequenceNumber = 1,
-                            TotalPoints = 0
+                            TotalPoints = 4
                         },
                         new
                         {
@@ -221,7 +221,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Sectioning",
                             EvaluationCriteriaGroupId = 5,
                             SequenceNumber = 2,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -229,7 +229,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Control of Hair",
                             EvaluationCriteriaGroupId = 5,
                             SequenceNumber = 3,
-                            TotalPoints = 0
+                            TotalPoints = 5
                         },
                         new
                         {
@@ -237,7 +237,7 @@ namespace SalonGarden.Web.Migrations
                             Description = "Teach Guest How to Recreate",
                             EvaluationCriteriaGroupId = 5,
                             SequenceNumber = 4,
-                            TotalPoints = 0
+                            TotalPoints = 4
                         });
                 });
 
@@ -304,7 +304,7 @@ namespace SalonGarden.Web.Migrations
 
                     b.HasIndex("EvaluationId");
 
-                    b.ToTable("EvaluationDetailItem");
+                    b.ToTable("EvaluationDetailItems");
                 });
 
             modelBuilder.Entity("SalonGarden.Core.Entities.EvaluationStatus", b =>
