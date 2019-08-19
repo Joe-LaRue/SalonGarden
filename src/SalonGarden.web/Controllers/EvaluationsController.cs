@@ -27,13 +27,24 @@ namespace SalonGarden.Web.Controllers
         // GET: Evaluations
         public async Task<IActionResult> Index()
         {
+            var userList = _userManager.Users.ToList();
+
             var viewModel = new EvaluationListViewModel();
             
-            viewModel.Evaluations = await _context.Evaluations
+            var evaluations = await _context.Evaluations
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
                 .Include(e => e.Technique)
                 .ToListAsync();
+
+            foreach (var evaluation in evaluations )
+            {
+                var dto = new EvaluationDto(evaluation);
+                dto.StudentName = userList.First(x => x.Id == evaluation.StudentId).UserName;
+                dto.EducatorName = userList.First(x => x.Id == evaluation.EducatorId).UserName;
+                viewModel.EvaluationDtos.Add(dto);
+            }
+
 
             return View(viewModel);
         }
@@ -53,6 +64,7 @@ namespace SalonGarden.Web.Controllers
             var evaluation = await _context.Evaluations
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
+                .Include(e => e.Technique)
                 .Include(e => e.EvaluationDetailItems)
                 .FirstOrDefaultAsync(m => m.Id == id);
 

@@ -17,31 +17,27 @@
             <th>Educator</th>
             <th>Type</th>
             <th>Technique</th>
-            <th>Description</th>
             <th></th>
         </tr>
     </thead>
     <tbody>
-@foreach (var evaluation in Model.Evaluations) {
+@foreach (var evaluation in Model.EvaluationDtos) {
         <tr>
             <td>
                @evaluation.CreationDate.ToShortDateString()
             </td>
             <td>
-                @evaluation.StudentId
+                @evaluation.StudentName
             </td>
             <td>
-                @evaluation.EducatorId
+                @evaluation.EducatorName
             </td>
             <td>
-                @evaluation.EvaluationType.Description
+                @evaluation.EvaluationType
             </td>
             <td>
-                @evaluation.Technique.Description
-            </td>
-            <td>
-                @evaluation.Description
-            </td>          
+                @evaluation.TechniqueName
+            </td>         
             <td>
                 <a asp-action="Edit" asp-route-id="@evaluation.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@evaluation.Id">Details</a> |

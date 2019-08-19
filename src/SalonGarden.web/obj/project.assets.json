@@ -70,6 +70,39 @@
           "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.props": {}
         }
       },
+      "Microsoft.AspNetCore.Mvc.Razor.Extensions/3.0.0-preview6.19304.1": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Razor.Language": "3.0.0-preview6.19304.1",
+          "Microsoft.CodeAnalysis.Razor": "3.0.0-preview6.19304.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll": {}
+        }
+      },
+      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/3.0.0-preview6.19307.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.AspNetCore.Mvc.Razor.Extensions": "3.0.0-preview6.19304.1",
+          "Microsoft.CodeAnalysis.Razor": "3.0.0-preview6.19304.1",
+          "Microsoft.Extensions.DependencyModel": "3.0.0-preview6-27804-01"
+        },
+        "compile": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ],
+        "build": {
+          "build/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets": {}
+        }
+      },
       "Microsoft.AspNetCore.Razor/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -2664,6 +2697,33 @@
         "staticwebassets/V4/Identity/lib/jquery/dist/jquery.js",
         "staticwebassets/V4/Identity/lib/jquery/dist/jquery.min.js",
         "staticwebassets/V4/Identity/lib/jquery/dist/jquery.min.map"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Razor.Extensions/3.0.0-preview6.19304.1": {
+      "sha512": "WobVFzx/AfRIgiW49gg6iGATMdtuBmsKlUfvKUDEHqSRCmxKhAXjyR6rp8k5vsYsRo4/nT9lkIY+oaRfYH/a2A==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.razor.extensions/3.0.0-preview6.19304.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.dll",
+        "lib/netstandard2.0/Microsoft.AspNetCore.Mvc.Razor.Extensions.xml",
+        "microsoft.aspnetcore.mvc.razor.extensions.3.0.0-preview6.19304.1.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.razor.extensions.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation/3.0.0-preview6.19307.2": {
+      "sha512": "YJq9IKrJ6kc7egcU0IVo4ilh/wn7hZiqnOQmucaWxboL0pcFmjN2F5IEoLGUrC7Qq2RiJ/suZhr5AEufS00KBg==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.mvc.razor.runtimecompilation/3.0.0-preview6.19307.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "build/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.targets",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll",
+        "lib/netcoreapp3.0/Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.xml",
+        "microsoft.aspnetcore.mvc.razor.runtimecompilation.3.0.0-preview6.19307.2.nupkg.sha512",
+        "microsoft.aspnetcore.mvc.razor.runtimecompilation.nuspec"
       ]
     },
     "Microsoft.AspNetCore.Razor/2.2.0": {
@@ -7905,6 +7965,7 @@
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.0.0-preview6.19307.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.0.0-preview6.19307.2",
       "Microsoft.AspNetCore.Identity.UI >= 3.0.0-preview6.19307.2",
+      "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation >= 3.0.0-preview6.19307.2",
       "Microsoft.EntityFrameworkCore.InMemory >= 2.2.6",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.0.0-preview6.19304.10",
       "Microsoft.EntityFrameworkCore.Sqlite >= 3.0.0-preview6.19304.10",
@@ -7963,6 +8024,10 @@
             "version": "[3.0.0-preview6.19307.2, )"
           },
           "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[3.0.0-preview6.19307.2, )"
+          },
+          "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
             "target": "Package",
             "version": "[3.0.0-preview6.19307.2, )"
           },

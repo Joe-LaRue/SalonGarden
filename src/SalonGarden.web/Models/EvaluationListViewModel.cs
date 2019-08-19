@@ -8,6 +8,6 @@ namespace SalonGarden.Web.Models
 {
     public class EvaluationListViewModel
     {
-        public List<Evaluation> Evaluations { get; set; }
+        public List<EvaluationDto> EvaluationDtos { get; set; } = new List<EvaluationDto>();
     }
 }

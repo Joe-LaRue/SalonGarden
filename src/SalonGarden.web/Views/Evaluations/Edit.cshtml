@@ -4,26 +4,60 @@
     ViewData["Title"] = "Edit";
 }
 
-<div class="border bg-light p-2 mb-2">
-    <div class="row">
-        <div class="col-3">
-            <b>Student</b> <br />
+
+
+
+<div class="row mb-2">
+    <div class="col-6">
+        <div class="border border-bottom-0 bg-light p-1">
+            <b>Student</b>
+        </div>
+        <div class="border p-1">
             @Model.Student.Email
         </div>
-        <div class="col-3">
-            <b>Educator</b> <br />
+    </div>
+    <div class="col-6">
+        <div class="border border-bottom-0 bg-light p-1">
+            <b>Educator</b>
+        </div>
+        <div class="border p-1">
             @Model.Educator.UserName
-        </div>
-        <div class="col-3">
-            <b>Created</b> <br />
-            @Model.Evaluation.CreationDate.ToShortDateString()
-        </div>
-        <div class="col-3">
-            <b>Technique</b> <br />
-            @Model.Evaluation.Technique.Description
+
         </div>
     </div>
 </div>
+
+
+
+<div class="row mb-2">
+    <div class="col-4">
+        <div class="border border-bottom-0 bg-light p-1">
+            <b>Created</b>
+        </div>
+        <div class="border p-1">
+            @Model.Evaluation.CreationDate.ToShortDateString()
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="border border-bottom-0 bg-light  p-1">
+            <b>Technique</b>
+        </div>
+        <div class="border  p-1">
+            @Model.Evaluation.Technique.Description
+
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="border border-bottom-0 bg-light  p-1">
+            <b>Type</b>
+        </div>
+        <div class="border  p-1">
+            @Model.Evaluation.EvaluationType.Description
+
+        </div>
+    </div>
+</div>
+
 
 @foreach (var criteriaGroup in Model.CriteriaGroups.OrderBy(x => x.SequenceNumber))
 {
@@ -42,7 +76,7 @@
                     <select class="form-control scoreInput" data-detailItemId="@detailItem.Id">
                         @for (int i = 0; i < criteria.TotalPoints; i++)
                         {
-                            <option value="@i" selected="@(detailItem.AllocatedPoints == i ? true : false)" >@i</option>
+                            <option value="@i" selected="@(detailItem.AllocatedPoints == i ? true : false)">@i</option>
                         }
                     </select>
 

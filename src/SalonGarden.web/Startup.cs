@@ -45,7 +45,7 @@ namespace SalonGarden.Web
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews().AddRazorRuntimeCompilation();
             services.AddRazorPages();
         }
 
