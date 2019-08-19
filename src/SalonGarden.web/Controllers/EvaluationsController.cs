@@ -32,6 +32,7 @@ namespace SalonGarden.Web.Controllers
             var viewModel = new EvaluationListViewModel();
             
             var evaluations = await _context.Evaluations
+                .Include(e => e.EvaluationDetailItems)
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
                 .Include(e => e.Technique)

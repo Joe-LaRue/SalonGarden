@@ -17,6 +17,7 @@
             <th>Educator</th>
             <th>Type</th>
             <th>Technique</th>
+            <th>Score</th>
             <th></th>
         </tr>
     </thead>
@@ -38,6 +39,9 @@
             <td>
                 @evaluation.TechniqueName
             </td>         
+            <td>
+                @evaluation.Score
+            </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@evaluation.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@evaluation.Id">Details</a> |

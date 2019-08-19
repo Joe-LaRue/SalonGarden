@@ -23,7 +23,7 @@ namespace SalonGarden.Web.Models
             TechniqueName = evaluation.Technique.Description;
             EvaluationType = evaluation.EvaluationType.Description;
             Id = evaluation.Id;
-            Score = 0; //evaluation.EvaluationDetailItems.Sum(x => x.AllocatedPoints);
+            Score =  evaluation.EvaluationDetailItems.Sum(x => x.AllocatedPoints);
         }
     }
 }
