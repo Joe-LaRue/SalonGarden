@@ -5,82 +5,77 @@
 }
 
 
-<h3>Evaluation Details</h3>
 
-
-
-<div class="row mb-2">
-    <div class="col-6">
-        <div class="border border-bottom-0 bg-light p-1">
-            <b>Student</b>
-        </div>
-        <div class="border p-1">
-            @Model.Student.Email
-        </div>
-    </div>
-    <div class="col-6">
-        <div class="border border-bottom-0 bg-light p-1">
-            <b>Educator</b>
-        </div>
-        <div class="border p-1">
-            @Model.Educator.UserName
-
-        </div>
-    </div>
+<div class="border bg-light p-2 mb-2 d-flex">
+    <div> <span class="h3">@Model.Student.Email</span></div>
 </div>
 
-
-
-<div class="row mb-2">
-    <div class="col-4">
-        <div class="border border-bottom-0 bg-light p-1">
-            <b>Created</b>
+<div class="mb-2">
+    <div class="row mb-2">
+        <div class="col-6">
+            <div class="border border-bottom-0 bg-light p-1">
+                <b>Created</b>
+            </div>
+            <div class="border p-1 bg-white">
+                @Model.Evaluation.CreationDate.ToShortDateString()
+            </div>
         </div>
-        <div class="border p-1">
-            @Model.Evaluation.CreationDate.ToShortDateString()
+        <div class="col-6">
+            <div class="border border-bottom-0 bg-light p-1">
+                <b>Educator</b>
+            </div>
+            <div class="border p-1 bg-white">
+                @Model.Educator.UserName
+
+            </div>
         </div>
     </div>
-    <div class="col-4">
-        <div class="border border-bottom-0 bg-light  p-1">
-            <b>Technique</b>
-        </div>
-        <div class="border  p-1">
-            @Model.Evaluation.Technique.Description
 
+    <div class="row">
+        <div class="col-6">
+            <div class="border border-bottom-0 bg-light  p-1">
+                <b>Technique</b>
+            </div>
+            <div class="border  p-1 bg-white">
+                @Model.Evaluation.Technique.Description
+
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="border border-bottom-0 bg-light  p-1">
+                <b>Evaluation Type</b>
+            </div>
+            <div class="border  p-1 bg-white">
+                @Model.Evaluation.EvaluationType.Description
+
+            </div>
         </div>
     </div>
-    <div class="col-4">
-        <div class="border border-bottom-0 bg-light  p-1">
-            <b>Type</b>
-        </div>
-        <div class="border  p-1">
-            @Model.Evaluation.EvaluationType.Description
 
-        </div>
-    </div>
 </div>
 
+<hr />
 
 
 @foreach (var criteriaGroup in Model.CriteriaGroups.OrderBy(x => x.SequenceNumber))
 {
-<div class="border  p-2 mb-2">
-    <h4>@criteriaGroup.Description</h4>
-    @foreach (var criteria in criteriaGroup.EvaluationCriteria.OrderBy(x => x.SequenceNumber))
-    {
-        <div class="d-flex mb-2 border bg-light p-2">
-            <div>
-                <span>@criteria.Description</span>
-            </div>
-            <div class="ml-auto">
+    <div class="border  p-2 mb-2">
+        <h4>@criteriaGroup.Description</h4>
+        @foreach (var criteria in criteriaGroup.EvaluationCriteria.OrderBy(x => x.SequenceNumber))
+        {
+            <div class="d-flex mb-2 border bg-light p-2">
+                <div>
+                    <span>@criteria.Description</span>
+                </div>
+                <div class="ml-auto">
 
-                <span>
-                    @Model.Evaluation.EvaluationDetailItems.First(x => x.EvaluationCriteriaId == criteria.Id).AllocatedPoints
-                </span>
+                    <span>
+                        @Model.Evaluation.EvaluationDetailItems.First(x => x.EvaluationCriteriaId == criteria.Id).AllocatedPoints
+                    </span>
+                </div>
             </div>
-        </div>
-    }
-</div>
+        }
+    </div>
 }
 
 
