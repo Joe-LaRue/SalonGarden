@@ -1,13 +1,13 @@
-﻿@model EvaluationListViewModel
-
+﻿@model SalonGarden.Web.Models.EvaluationListViewModel
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "History";
 }
-<h3>Open Evaluations</h3>
+
+<h3>History</h3>
 <div class="mb-2">
-    <a asp-action="history">View History</a> |
-    <a asp-action="Create">Create New</a>
+    <a asp-action="index" asp-controller="Evaluations">View Open</a>
 </div>
+
 
 <table class="table">
     <thead>
@@ -44,7 +44,6 @@
                     @evaluation.Score
                 </td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@evaluation.Id">Edit</a> |
                     <a asp-action="Details" asp-route-id="@evaluation.Id">Details</a> |
                     <a asp-action="Delete" asp-route-id="@evaluation.Id">Delete</a>
                 </td>

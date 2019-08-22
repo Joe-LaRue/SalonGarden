@@ -36,9 +36,36 @@ namespace SalonGarden.Web.Controllers
                 .Include(e => e.EvaluationStatus)
                 .Include(e => e.EvaluationType)
                 .Include(e => e.Technique)
+                .Where(e => e.EvaluationStatusId == (int)EvaluationStatuses.Open)
                 .ToListAsync();
 
             foreach (var evaluation in evaluations )
+            {
+                var dto = new EvaluationDto(evaluation);
+                dto.StudentName = userList.First(x => x.Id == evaluation.StudentId).UserName;
+                dto.EducatorName = userList.First(x => x.Id == evaluation.EducatorId).UserName;
+                viewModel.EvaluationDtos.Add(dto);
+            }
+
+
+            return View(viewModel);
+        }
+
+        public async Task<IActionResult> History()
+        {
+            var userList = _userManager.Users.ToList();
+
+            var viewModel = new EvaluationListViewModel();
+
+            var evaluations = await _context.Evaluations
+                .Include(e => e.EvaluationDetailItems)
+                .Include(e => e.EvaluationStatus)
+                .Include(e => e.EvaluationType)
+                .Include(e => e.Technique)
+                .Where(e => e.EvaluationStatusId == (int)EvaluationStatuses.Closed)
+                .ToListAsync();
+
+            foreach (var evaluation in evaluations)
             {
                 var dto = new EvaluationDto(evaluation);
                 dto.StudentName = userList.First(x => x.Id == evaluation.StudentId).UserName;
@@ -139,21 +166,29 @@ namespace SalonGarden.Web.Controllers
                 return NotFound();
             }
 
-            var viewModel = new EditEvaluationViewModel();
-
-            viewModel.CriteriaGroups = await _context.EvaluationCriteriaGroups.Include(x => x.EvaluationCriteria).ToListAsync();
-
             var evaluation = await _context.Evaluations
-                .Include(e => e.EvaluationStatus)
-                .Include(e => e.EvaluationType)
-                .Include(e => e.EvaluationDetailItems)
-                .Include(e => e.Technique)
-                .FirstOrDefaultAsync(m => m.Id == id);
+               .Include(e => e.EvaluationStatus)
+               .Include(e => e.EvaluationType)
+               .Include(e => e.EvaluationDetailItems)
+               .Include(e => e.Technique)
+               .FirstOrDefaultAsync(m => m.Id == id);
 
             if (evaluation == null)
             {
                 return NotFound();
             }
+
+            if (evaluation.EvaluationStatusId != (int)EvaluationStatuses.Open)
+            {
+                return RedirectToAction(nameof(Details), new { id = id });
+            }
+
+
+            var viewModel = new EditEvaluationViewModel();
+
+            viewModel.CriteriaGroups = await _context.EvaluationCriteriaGroups.Include(x => x.EvaluationCriteria).ToListAsync();
+
+           
 
             viewModel.Evaluation = evaluation;
 

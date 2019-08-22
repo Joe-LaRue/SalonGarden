@@ -453,3 +453,4 @@ C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\System.Xml.
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\WindowsBase.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
+C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Evaluations\History.cshtml.g.cs
