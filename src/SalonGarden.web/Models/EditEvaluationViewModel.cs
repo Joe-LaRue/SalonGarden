@@ -13,5 +13,6 @@ namespace SalonGarden.Web.Models
         public List<EvaluationCriteriaGroup> CriteriaGroups { get; set; }
         public IdentityUser Student { get; internal set; }
         public IdentityUser Educator { get; internal set; }
+        
     }
 }

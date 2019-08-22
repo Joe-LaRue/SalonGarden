@@ -8,7 +8,12 @@
 <div class="border bg-light p-2 mb-2 d-flex">
     <div> <span class="h3">@Model.Student.Email</span></div>
     <div class="ml-auto">
-        <button class="btn btn-success">Complete Evaluation</button>
+       
+            <button class="btn btn-success" data-toggle="modal" data-target="#completeEvalModal">
+                Complete Evaluation
+            </button>
+       
+
     </div>
 </div>
 
@@ -70,7 +75,7 @@
                     <span>@criteria.Description</span>
                 </div>
                 <div class="ml-auto">
-                                        
+
                     <select class="form-control scoreInput" data-detailItemId="@detailItem.Id">
                         @for (int i = 0; i <= criteria.TotalPoints; i++)
                         {
@@ -83,9 +88,35 @@
     </div>
 }
 
-
 <div>
     <a asp-action="Index">Back to List</a>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="completeEvalModal" tabindex="-1" role="dialog" >
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form asp-action="CompleteEvaluation" asp-controller="Evaluations">
+                <input type="hidden" name="evaluationId" value="@Model.Evaluation.Id" />
+                <div class="modal-header">
+                    <h5 class="modal-title">Complete Evaluation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="alert alert-success">
+                        Complete this evaluation?
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Complete Evaluation</button>
+                </div>
+            </form>
+        </div>
+    </div>
 </div>
 
 @section Scripts {

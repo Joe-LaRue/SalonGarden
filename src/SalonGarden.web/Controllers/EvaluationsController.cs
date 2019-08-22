@@ -210,5 +210,19 @@ namespace SalonGarden.Web.Controllers
 
             return BadRequest();
         }
+
+        public IActionResult CompleteEvaluation(int evaluationId)
+        {
+            var evaluation = _context.Evaluations.FirstOrDefault(x => x.Id == evaluationId);
+
+            if (evaluation != null)
+            {
+                evaluation.EvaluationStatusId = (int)EvaluationStatuses.Closed;
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return BadRequest();
+        }
     }
 }
