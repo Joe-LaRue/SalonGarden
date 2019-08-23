@@ -10,9 +10,11 @@ using Microsoft.EntityFrameworkCore;
 using SalonGarden.Core.Entities;
 using SalonGarden.Web.Models;
 using SalonGarden.Web.Data.SalonGarden;
+using Microsoft.AspNetCore.Authorization;
 
 namespace SalonGarden.Web.Controllers
 {
+    [Authorize(Roles = Data.Constants.Roles.EDUCATOR)]
     public class EvaluationsController : Controller
     {
         private readonly SalonGardenContext _context;
@@ -145,7 +147,7 @@ namespace SalonGarden.Web.Controllers
                 evaluation.InitializeEvaluationStepEntries(evaluationCriteria);
                 await _context.SaveChangesAsync();
 
-                return RedirectToAction(nameof(Details), new { id = evaluation.Id });
+                return RedirectToAction(nameof(Edit), new { id = evaluation.Id });
             }
 
             
@@ -201,36 +203,21 @@ namespace SalonGarden.Web.Controllers
         }
 
         
-      
-        // GET: Evaluations/Delete/5
-        public async Task<IActionResult> Delete(int? id)
-        {
-            if (id == null)
-            {
-                return NotFound();
-            }
-
-            var evaluation = await _context.Evaluations
-                .Include(e => e.EvaluationStatus)
-                .Include(e => e.EvaluationType)
-                .FirstOrDefaultAsync(m => m.Id == id);
-            if (evaluation == null)
-            {
-                return NotFound();
-            }
-
-            return View(evaluation);
-        }
-
         // POST: Evaluations/Delete/5
-        [HttpPost, ActionName("Delete")]
+        [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> DeleteConfirmed(int id)
+        public IActionResult DeleteEvaluation(int evaluationId)
         {
-            var evaluation = await _context.Evaluations.FindAsync(id);
-            _context.Evaluations.Remove(evaluation);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
+            var evaluation = _context.Evaluations.FirstOrDefault(x => x.Id == evaluationId);
+
+            if (evaluation != null)
+            {
+                _context.Remove(evaluation);
+                _context.SaveChanges();
+                return RedirectToAction(nameof(Index));
+            }
+
+            return BadRequest();
         }
 
         public IActionResult UpdateScore(int detailItemId, int score)

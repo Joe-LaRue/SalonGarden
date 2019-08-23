@@ -23,7 +23,7 @@ namespace SalonGarden.Web.Data
             SeedUsers(userManager);
         }
 
-        public void SeedUsers(UserManager<IdentityUser> userManager)
+        private void SeedUsers(UserManager<IdentityUser> userManager)
         {
             //educators
             if (userManager.FindByNameAsync("mkrabappel@thesimpsons.com").Result == null)
@@ -70,7 +70,7 @@ namespace SalonGarden.Web.Data
             }
         }
 
-        public void SeedRoles(RoleManager<IdentityRole> roleManager)
+        private void SeedRoles(RoleManager<IdentityRole> roleManager)
         {
             if (!roleManager.RoleExistsAsync("Educator").Result)
             {

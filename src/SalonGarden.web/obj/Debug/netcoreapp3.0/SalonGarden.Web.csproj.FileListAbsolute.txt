@@ -168,8 +168,6 @@ C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Eval
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\EvaluationCriterias\Edit.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\EvaluationCriterias\Index.cshtml.g.cs
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.EntityFrameworkCore.InMemory.dll
-C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cs
-C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cache
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\Microsoft.AspNetCore.Antiforgery.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\Microsoft.AspNetCore.Authentication.Abstractions.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\Microsoft.AspNetCore.Authentication.Cookies.dll
@@ -454,3 +452,5 @@ C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\refs\WindowsBase
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
 C:\code\SalonGarden\src\SalonGarden.web\bin\Debug\netcoreapp3.0\Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation.dll
 C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\Razor\Views\Evaluations\History.cshtml.g.cs
+C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cs
+C:\code\SalonGarden\src\SalonGarden.web\obj\Debug\netcoreapp3.0\SalonGarden.Web.MvcApplicationPartsAssemblyInfo.cache
